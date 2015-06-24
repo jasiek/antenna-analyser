@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="7.1.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="14" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<packages>
+<package name="DDS_AD9850">
+<description>AD9850 DDS module</description>
+<wire x1="22.25" y1="-12.7" x2="-22.25" y2="-12.7" width="0.127" layer="51"/>
+<wire x1="-22.25" y1="-12.7" x2="-22.25" y2="12.7" width="0.127" layer="51"/>
+<wire x1="-22.25" y1="12.7" x2="22.25" y2="12.7" width="0.127" layer="51"/>
+<wire x1="22.25" y1="12.7" x2="22.25" y2="-12.7" width="0.127" layer="51"/>
+<pad name="1" x="-15.24" y="-10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="2" x="-12.7" y="-10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="3" x="-10.16" y="-10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="4" x="-7.62" y="-10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="5" x="-5.08" y="-10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="6" x="-2.54" y="-10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="7" x="0" y="-10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="8" x="2.54" y="-10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="9" x="5.08" y="-10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="10" x="7.62" y="-10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="20" x="-15.24" y="10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="19" x="-12.7" y="10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="18" x="-10.16" y="10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="17" x="-7.62" y="10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="16" x="-5.08" y="10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="15" x="-2.54" y="10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="14" x="0" y="10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="13" x="2.54" y="10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="12" x="5.08" y="10.16" drill="0.8" shape="octagon" rot="R90"/>
+<pad name="11" x="7.62" y="10.16" drill="0.8" shape="octagon" rot="R90"/>
+<circle x="19.685" y="-10.16" radius="1.5" width="0.127" layer="51"/>
+<circle x="19.685" y="10.16" radius="1.5" width="0.127" layer="51"/>
+<circle x="-19.685" y="-10.16" radius="1.5" width="0.127" layer="51"/>
+<circle x="-19.685" y="10.16" radius="1.5" width="0.127" layer="51"/>
+<wire x1="13.335" y1="-3.81" x2="13.335" y2="3.81" width="0.127" layer="51"/>
+<wire x1="13.335" y1="3.81" x2="18.415" y2="3.81" width="0.127" layer="51"/>
+<wire x1="18.415" y1="3.81" x2="18.415" y2="-3.81" width="0.127" layer="51"/>
+<wire x1="18.415" y1="-3.81" x2="13.335" y2="-3.81" width="0.127" layer="51"/>
+<circle x="-17.78" y="0" radius="1.5" width="0.127" layer="51"/>
+<wire x1="-21.59" y1="-3.81" x2="-21.59" y2="3.81" width="0.127" layer="51"/>
+<wire x1="-21.59" y1="3.81" x2="-13.97" y2="3.81" width="0.127" layer="51"/>
+<wire x1="-13.97" y1="3.81" x2="-13.97" y2="-3.81" width="0.127" layer="51"/>
+<wire x1="-13.97" y1="-3.81" x2="-21.59" y2="-3.81" width="0.127" layer="51"/>
+<wire x1="-17.78" y1="-1.27" x2="-17.78" y2="1.27" width="0.127" layer="51"/>
+<wire x1="-19.05" y1="0" x2="-16.51" y2="0" width="0.127" layer="51"/>
+<text x="15.875" y="0" size="1.27" layer="51" font="vector" rot="R90" align="center">XO
+125MHz</text>
+<wire x1="-16.51" y1="-11.43" x2="-16.51" y2="-8.89" width="0.127" layer="21"/>
+<wire x1="-16.51" y1="-8.89" x2="8.89" y2="-8.89" width="0.127" layer="21"/>
+<wire x1="8.89" y1="-8.89" x2="8.89" y2="-11.43" width="0.127" layer="21"/>
+<wire x1="8.89" y1="-11.43" x2="-16.51" y2="-11.43" width="0.127" layer="21"/>
+<wire x1="-16.51" y1="8.89" x2="-16.51" y2="11.43" width="0.127" layer="21"/>
+<wire x1="-16.51" y1="11.43" x2="8.89" y2="11.43" width="0.127" layer="21"/>
+<wire x1="8.89" y1="11.43" x2="8.89" y2="8.89" width="0.127" layer="21"/>
+<wire x1="8.89" y1="8.89" x2="-16.51" y2="8.89" width="0.127" layer="21"/>
+<text x="-17.78" y="6.35" size="1.27" layer="27" font="vector" align="center">&gt;Value</text>
+<text x="-17.78" y="-5.715" size="1.27" layer="25" font="vector" align="center">&gt;Name</text>
+<wire x1="-22.225" y1="12.7" x2="22.225" y2="12.7" width="0.127" layer="21"/>
+<wire x1="22.225" y1="12.7" x2="22.225" y2="-12.7" width="0.127" layer="21"/>
+<wire x1="22.225" y1="-12.7" x2="-22.225" y2="-12.7" width="0.127" layer="21"/>
+<wire x1="-22.225" y1="-12.7" x2="-22.225" y2="12.7" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="AD9850_DDS_MODULE">
+<description>AD9850 DDS Module</description>
+<wire x1="-12.7" y1="20.32" x2="12.7" y2="20.32" width="0.254" layer="94"/>
+<wire x1="12.7" y1="20.32" x2="12.7" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-20.32" x2="-12.7" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-20.32" x2="-12.7" y2="20.32" width="0.254" layer="94"/>
+<pin name="IOUT2" x="15.24" y="15.24" length="short" direction="out" rot="R180"/>
+<pin name="IOUT1" x="15.24" y="17.78" length="short" direction="out" rot="R180"/>
+<pin name="QOUT2" x="15.24" y="2.54" length="short" direction="out" rot="R180"/>
+<pin name="QOUT1" x="15.24" y="5.08" length="short" direction="out" rot="R180"/>
+<pin name="GND@P1" x="-15.24" y="-12.7" length="short" direction="pwr"/>
+<pin name="RESET" x="15.24" y="-15.24" length="short" rot="R180"/>
+<pin name="DATA" x="15.24" y="-12.7" length="short" direction="in" rot="R180"/>
+<pin name="FU_UD" x="15.24" y="-10.16" length="short" direction="in" rot="R180"/>
+<pin name="W_CLK" x="15.24" y="-7.62" length="short" direction="in" rot="R180"/>
+<pin name="VCC@P10" x="-15.24" y="17.78" length="short" direction="pwr"/>
+<pin name="VCC@P11" x="-15.24" y="15.24" length="short" direction="pwr"/>
+<pin name="D0" x="-15.24" y="10.16" length="short" direction="in"/>
+<pin name="D1" x="-15.24" y="7.62" length="short" direction="in"/>
+<pin name="D2" x="-15.24" y="5.08" length="short" direction="in"/>
+<pin name="D3" x="-15.24" y="2.54" length="short" direction="in"/>
+<pin name="D4" x="-15.24" y="0" length="short" direction="in"/>
+<pin name="D5" x="-15.24" y="-2.54" length="short" direction="in"/>
+<pin name="D6" x="-15.24" y="-5.08" length="short" direction="in"/>
+<pin name="D7" x="-15.24" y="-7.62" length="short" direction="in"/>
+<pin name="GND@P16" x="-15.24" y="-15.24" length="short" direction="pwr"/>
+<text x="0" y="22.86" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center">&gt;Name</text>
+<text x="0" y="-22.86" size="1.778" layer="95" font="vector" rot="R180" align="top-center">&gt;Value</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DDS_MODULE:AD9850" prefix="U" uservalue="yes">
+<description>&lt;h3&gt;AD9850 DDS Module&lt;/h3&gt;
+
+&lt;p&gt;Created by Johan Adler, October 2014.&lt;/p&gt;
+
+&lt;p&gt;Not tested on an actual PCB, so I can't promise anything. Also please check the actual pinout of your specific module. Mine are of the low price eBay version, and the pinout is correct for my modules.&lt;/p&gt;
+
+&lt;p&gt;The placement of VCC over data pins over GND on the symbol is meant to make it easier to set it up for default serial transfer. For this you would connect D0 and D1 to VCC, D2 to GND.&lt;/p&gt;
+
+&lt;p&gt;IOUT is analog signal out, sinus wave, QOUT is square wave. Outputs 1 are normal, outputs 2 are inverted.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="AD9850_DDS_MODULE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="DDS_MODULE" package="DDS_AD9850">
+<connects>
+<connect gate="G$1" pin="D0" pad="9"/>
+<connect gate="G$1" pin="D1" pad="8"/>
+<connect gate="G$1" pin="D2" pad="7"/>
+<connect gate="G$1" pin="D3" pad="6"/>
+<connect gate="G$1" pin="D4" pad="5"/>
+<connect gate="G$1" pin="D5" pad="4"/>
+<connect gate="G$1" pin="D6" pad="3"/>
+<connect gate="G$1" pin="D7" pad="2"/>
+<connect gate="G$1" pin="DATA" pad="14"/>
+<connect gate="G$1" pin="FU_UD" pad="13"/>
+<connect gate="G$1" pin="GND@P1" pad="1"/>
+<connect gate="G$1" pin="GND@P16" pad="16"/>
+<connect gate="G$1" pin="IOUT1" pad="20"/>
+<connect gate="G$1" pin="IOUT2" pad="19"/>
+<connect gate="G$1" pin="QOUT1" pad="18"/>
+<connect gate="G$1" pin="QOUT2" pad="17"/>
+<connect gate="G$1" pin="RESET" pad="15"/>
+<connect gate="G$1" pin="VCC@P10" pad="10"/>
+<connect gate="G$1" pin="VCC@P11" pad="11"/>
+<connect gate="G$1" pin="W_CLK" pad="12"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="VALUE" value="AD9850 DDS Module"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
+</eagle>
