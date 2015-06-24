@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name SMA_EDGE)(type Legacy)(uri "$(KIPRJMOD)/libs/JOS_SMA_connectors/SMA_EDGE.mod")(options "")(descr ""))
+  (lib (name sop8)(type KiCad)(uri "$(KIPRJMOD)/libs/jasiek/sop8.pretty")(options "")(descr ""))
 )
