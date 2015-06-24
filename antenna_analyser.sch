@@ -28,8 +28,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:sma_edge
-LIBS:antenna_analyser-cache
+LIBS:arduino
+LIBS:misc
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -87,17 +87,6 @@ F 2 "" H 5450 4600 60  0000 C CNN
 F 3 "" H 5450 4600 60  0000 C CNN
 	1    5450 4600
 	-1   0    0    1   
-$EndComp
-$Comp
-L GND #PWR03
-U 1 1 5570842B
-P 5850 2400
-F 0 "#PWR03" H 5850 2150 50  0001 C CNN
-F 1 "GND" H 5850 2250 50  0000 C CNN
-F 2 "" H 5850 2400 60  0000 C CNN
-F 3 "" H 5850 2400 60  0000 C CNN
-	1    5850 2400
-	1    0    0    -1  
 $EndComp
 $Comp
 L R R4
@@ -652,17 +641,6 @@ Wire Wire Line
 	5850 3700 6050 3700
 Wire Wire Line
 	5850 3800 6050 3800
-$Comp
-L SMA_EDGE SMA_E1
-U 1 1 55720D67
-P 6300 1900
-F 0 "SMA_E1" H 6450 2200 60  0000 C CNN
-F 1 "SMA_EDGE" H 6450 2100 60  0000 C CNN
-F 2 "" H 6300 1900 60  0000 C CNN
-F 3 "" H 6300 1900 60  0000 C CNN
-	1    6300 1900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5850 1900 5950 1900
 Wire Wire Line
