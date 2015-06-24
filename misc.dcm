@@ -1,0 +1,88 @@
+EESchema-DOCLIB  Version 2.0  Date: Thu 21 Jun 2012 12:35:08 PM EDT
+#
+$CMP 16X2_BACKLIT_LCD
+D 16x2 Parallel Backlit LCD
+K LCD
+$ENDCMP
+#
+$CMP 3X4_KEYPAD
+D Devantech 3x4 Matrix Keypad
+K KEYPAD
+$ENDCMP
+#
+$CMP 5V_STEPPER_MOTOR
+D 5V Stepper Motor
+K STEPPER MOTOR
+$ENDCMP
+#
+$CMP 78L08
+D Linear Regulator +8V
+K POWER REGUL
+$ENDCMP
+#
+$CMP 8X2_LCD
+D 8x2 Character LCD (Pololu #356)
+K LCD
+$ENDCMP
+#
+$CMP BIG_EASY_DRIVER
+D Big Easy Driver
+K MOTOR STEPPER
+$ENDCMP
+#
+$CMP DS1307_BREAKOUT
+D Real-time Clock Module (Sparkfun #99)
+K CLOCK BREAKOUT
+$ENDCMP
+#
+$CMP FX1901
+D 25lb. Force Sensor
+K SENSOR WEIGHT
+$ENDCMP
+#
+$CMP INA122
+D Instrumentation Amplifier
+K AMP
+$ENDCMP
+#
+$CMP LM4040
+D 4.096V REFERENCE
+K REF
+$ENDCMP
+#
+$CMP MCP3424
+D 4-channel 18-bit ADC
+K ADC
+$ENDCMP
+#
+$CMP MCP6002
+D 1MHz Low-power Op-amp
+K AMP OP
+$ENDCMP
+#
+$CMP PHOTODIODE
+D Photodiode
+K DIODE TRANSISTOR PHOTO
+$ENDCMP
+#
+$CMP POS_MOTOR
+D Gutted Sub-micro Servo (Pololu #1053)
+K motor servo
+$ENDCMP
+#
+$CMP PUSH_POWER_SWITCH
+D Pushbutton Power Switch SV (Pololu #750)
+K POWER SWITCH
+$ENDCMP
+#
+$CMP TB6612FNG_BREAKOUT
+D TB6612FNG Dual Motor Driver Carrier (Pololu #713)
+K MOTOR DRIVER BREAKOUT
+$ENDCMP
+#
+$CMP TC4820
+D TC-48-20 Serial Header
+K SERIAL TC4820 HEADER
+$ENDCMP
+#
+#End Doc Library
