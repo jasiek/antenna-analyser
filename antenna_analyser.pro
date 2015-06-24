@@ -1,4 +1,4 @@
-update=2015 June 24, Wednesday 21:48:08
+update=2015 June 24, Wednesday 21:53:04
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,4 @@ LibName28=contrib
 LibName29=valves
 LibName30=libs/0xANDREW/arduino
 LibName31=libs/0xANDREW/misc
+LibName32=libs/JOS_SMA_connectors/sma_edge

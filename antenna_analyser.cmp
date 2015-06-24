@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 June 05, Friday 21:31:35
+Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 June 24, Wednesday 22:02:15
 
 BeginCmp
 TimeStamp = /557093CE;
@@ -169,10 +169,10 @@ IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
-TimeStamp = /55720D67;
+TimeStamp = /558B1D24;
 Reference = SMA_E1;
 ValeurCmp = SMA_EDGE;
-IdModule  = sma:SMA;
+IdModule  = SMA_EDGE:SMA_EDGE;
 EndCmp
 
 EndListe
