@@ -1,0 +1,39 @@
+PCBNEW-LibModule-V1
+# encoding utf-8
+Units mm
+$INDEX
+CAP-CAN-5mm
+$EndINDEX
+#
+# URL: http://kicadcloud.com/pcbModule/20
+#
+$MODULE CAP-CAN-5mm
+Po 0 0 0 15 50CE713E 00000000 ~~
+Li CAP-CAN-5mm
+Sc 0
+AR
+Op 0 0 0
+T0 0.508 4.318 1 1 0 0.15 N V 21 N "CAP5mm"
+T1 -0.762 -3.81 1 1 0 0.15 N V 21 N "VAL**"
+T2 -1.37 1.17 1 1 0 0.15 N V 21 N "+"
+DS 1.27 2.56 2.66 1.17 0.15 21
+DS -2.64 1.17 -1.25 2.56 0.15 21
+DS -1.25 2.56 1.27 2.56 0.15 21
+DS 2.66 -2.64 2.66 1.17 0.15 21
+DS -2.64 -2.64 -2.64 1.17 0.15 21
+DS -2.64 -2.64 2.66 -2.64 0.15 21
+$PAD
+Sh "1" R 0.65 2.2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.01 1.85
+$EndPAD
+$PAD
+Sh "2" R 0.65 2.2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.01 -1.85
+$EndPAD
+$EndMODULE CAP-CAN-5mm

@@ -1,0 +1,11 @@
+Rows: 2
+RowsPitch: 2.54mm
+Positions: 5
+PositionsPitch: 2.54mm
+PinCount: 10
+A: 12.7mm
+B: 5.03mm
+T: 2.29mm
+H: 6.09mm
+h: 3.18mm
+d: 0.66mm

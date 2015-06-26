@@ -1,0 +1,10 @@
+(module MTGNP565H328Z565P (layer F.Cu) (tedit 555C80D3)
+  (fp_text reference REF** (at 0 3.683) (layer F.SilkS) hide
+    (effects (font (size 0.6 0.6) (thickness 0.1)))
+  )
+  (fp_text value VAL** (at 0 0) (layer F.Fab)
+    (effects (font (size 0.6 0.6) (thickness 0.1)))
+  )
+  (fp_circle (center 0 0) (end 2.95 0) (layer F.CrtYd) (width 0.1))
+  (pad "" thru_hole circle (at 0 0) (size 5.65 5.65) (drill 3.2766) (layers *.Cu *.Mask F.SilkS))
+)

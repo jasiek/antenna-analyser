@@ -1,0 +1,7 @@
+L: 7.8mm - 8.2mm
+T1: 1.3mm - 1.7mm
+W1: 1.8mm - 2.2mm
+T2: 1.3mm - 1.7mm
+W2: 1.8mm - 2.2mm
+B: 4.3mm - 4.7mm
+H: 2.0mm

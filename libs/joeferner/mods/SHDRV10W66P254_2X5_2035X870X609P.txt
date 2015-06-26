@@ -1,0 +1,13 @@
+Shrouded 2x5 0.1" Male Header
+
+Rows: 2
+Positions: 5
+Pitch: 2.54mm
+d: 0.66mm
+height: 6.09mm
+
+A: 30.35mm
+B: 8.7mm
+a: -5.095mm
+b: -3.08mm
+

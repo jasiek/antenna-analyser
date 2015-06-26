@@ -1,0 +1,124 @@
+PCBNEW-LibModule-V1
+# encoding utf-8
+Units mm
+$INDEX
+SOIC127P600X175-14N
+$EndINDEX
+$MODULE SOIC127P600X175-14N
+Po 0 0 0 15 5248712C 00000000 ~~
+Li SOIC127P600X175-14N
+Sc 0
+AR
+Op 0 0 0
+T0 0 5.207 0.6 0.6 0 0.1 N V 21 N "SOIC127P600X175-14N"
+T1 0.1 0 0.6 0.6 0 0.1 N V 21 N "VAL**"
+DC -3.2 -4.6 -3.1 -4.6 0.3 21
+DC -0.9 -3.6 -0.7 -3.6 0.4 21
+DS -3.75 -4.65 3.75 -4.65 0.1 25
+DS 3.75 -4.65 3.75 4.65 0.1 25
+DS 3.75 4.65 -3.75 4.65 0.1 25
+DS -3.75 4.65 -3.75 -4.65 0.1 25
+DS -1.6 -4.3 1.6 -4.3 0.1 21
+DS 1.6 -4.3 1.6 4.3 0.1 21
+DS 1.6 4.3 -1.6 4.3 0.1 21
+DS -1.6 4.3 -1.6 -4.3 0.1 21
+$PAD
+Sh "1" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.7 -3.81
+$EndPAD
+$PAD
+Sh "2" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.7 -2.54
+$EndPAD
+$PAD
+Sh "3" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.7 -1.27
+$EndPAD
+$PAD
+Sh "4" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.7 0
+$EndPAD
+$PAD
+Sh "5" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.7 1.27
+$EndPAD
+$PAD
+Sh "6" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.7 2.54
+$EndPAD
+$PAD
+Sh "7" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.7 3.81
+$EndPAD
+$PAD
+Sh "8" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.7 3.81
+$EndPAD
+$PAD
+Sh "9" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.7 2.54
+$EndPAD
+$PAD
+Sh "10" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.7 1.27
+$EndPAD
+$PAD
+Sh "11" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.7 0
+$EndPAD
+$PAD
+Sh "12" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.7 -1.27
+$EndPAD
+$PAD
+Sh "13" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.7 -2.54
+$EndPAD
+$PAD
+Sh "14" R 1.55 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.7 -3.81
+$EndPAD
+$EndMODULE SOIC127P600X175-14N
+$EndLIBRARY

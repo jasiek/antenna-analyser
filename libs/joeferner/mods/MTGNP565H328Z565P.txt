@@ -1,0 +1,7 @@
+Type: ANSI
+Size: 4
+Fit: User Defined
+HoleDiameter: 3.2766mm
+Profile: Pan Head
+SupportDiameter: 5.6642
+ViasNumer: 0

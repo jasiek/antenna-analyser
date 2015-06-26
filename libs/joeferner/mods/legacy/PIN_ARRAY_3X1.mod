@@ -1,0 +1,52 @@
+PCBNEW-LibModule-V1
+# encoding utf-8
+Units deci-mils
+$INDEX
+PIN_ARRAY_3X1
+$EndINDEX
+#
+# URL: http://kicadcloud.com/pcbModule/47
+#
+$MODULE PIN_ARRAY_3X1
+Po 0 0 0 15 4C1130E0 00000000 ~~
+Li PIN_ARRAY_3X1
+Cd Connecteur 3 pins
+Kw CONN DEV
+Sc 0
+AR
+Op 0 0 0
+T0 100 -850 400 400 0 60 N V 21 N "PIN_ARRAY_3X1"
+T1 0 -850 400 400 0 60 N I 21 N "Val**"
+DS -1500 500 -1500 -500 60 21
+DS -1500 -500 1500 -500 60 21
+DS 1500 -500 1500 500 60 21
+DS 1500 500 -1500 500 60 21
+DS -500 -500 -500 500 60 21
+$PAD
+Sh "1" R 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -1000 0
+$EndPAD
+$PAD
+Sh "2" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "3" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 1000 0
+$EndPAD
+$SHAPE3D
+Na "pin_array/pins_array_3x1.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE PIN_ARRAY_3X1

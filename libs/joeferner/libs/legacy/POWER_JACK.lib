@@ -1,0 +1,19 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+# POWER_JACK
+# URL: http://kicadcloud.com/schematicSymbol/13
+#
+DEF POWER_JACK J 0 40 Y Y 1 F N
+F0 "J" -300 200 60 H V C CNN
+F1 "POWER_JACK" -75 -175 60 H V C CNN
+DRAW
+S -350 120 -10 80 0 1 0 F
+P 2 0 1 0  -50 -100  -100 -50 N
+P 2 0 1 0  50 100  -350 100 N
+P 4 0 1 0  50 -100  -150 -100  -250 0  -350 -100 N
+P 4 0 1 0  50 0  -50 0  -50 -100  0 -50 N
+X ~ 1 200 100 200 L 50 50 1 1 w
+X ~ 2 200 0 200 L 50 50 1 1 w
+X ~ 3 200 -100 200 L 50 50 1 1 w
+ENDDRAW
+ENDDEF

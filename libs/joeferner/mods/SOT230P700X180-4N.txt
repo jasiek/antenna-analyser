@@ -1,0 +1,11 @@
+Pitch: 2.3mm
+PinPackage: 4
+PinCount: 4
+L: 6.9mm - 7.1mm
+T: 0.85mm - 1.05mm
+W1: 0.6mm - 0.8mm
+W2: 2.9mm - 3.1mm
+A: 3.45mm - 3.55mm
+B: 6.45mm - 6.55mm
+H: 1.80mm
+K: 0.01mm

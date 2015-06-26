@@ -1,0 +1,98 @@
+PCBNEW-LibModule-V1
+# encoding utf-8
+Units mm
+$INDEX
+SJ1-352XNG
+$EndINDEX
+$MODULE SJ1-352XNG
+Po 0 0 0 15 53A22690 00000000 ~~
+Li SJ1-352XNG
+Sc 0
+AR
+Op 0 0 0
+T0 12.5 0 1 1 900 0.15 N V 21 N "SJ1-352XNG"
+T1 4.5 3 1 1 0 0.15 N V 21 N "VAL**"
+DS 0 6.5 12 6.5 0.15 25
+DS 12 6.5 12 -6.5 0.15 25
+DS 12 -6.5 0 -6.5 0.15 25
+DS 0 2 0 6.5 0.15 25
+DS 1.2 -2 -2 -2 0.15 25
+DS -2 -2 -2 2 0.15 25
+DS -2 2 1.2 2 0.15 25
+DS 1.2 2 1.2 -2 0.15 25
+DS 1.2 -6 11.5 -6 0.15 21
+DS 11.5 -6 11.5 6 0.15 21
+DS 11.5 6 1.2 6 0.15 21
+DS 0 -6.5 0 -2 0.15 25
+$PAD
+Sh "" C 0.65 0.65 0 0 0
+Dr 0.625 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2 -5
+$EndPAD
+$PAD
+Sh "" C 0.65 0.65 0 0 0
+Dr 0.625 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 4.5 -5
+$EndPAD
+$PAD
+Sh "" C 0.65 0.65 0 0 0
+Dr 0.625 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2 5
+$EndPAD
+$PAD
+Sh "" C 0.65 0.65 0 0 0
+Dr 0.625 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 4.5 5
+$EndPAD
+$PAD
+Sh "1" C 2.2 2.2 0 0 0
+Dr 1.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 4.5 0
+$EndPAD
+$PAD
+Sh "2" C 2.2 2.2 0 0 0
+Dr 1.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 9.5 5
+$EndPAD
+$PAD
+Sh "3" C 2.2 2.2 0 0 0
+Dr 1.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 9.5 -5
+$EndPAD
+$PAD
+Sh "4" C 2.2 2.2 0 0 0
+Dr 1.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 9.5 2.5
+$EndPAD
+$PAD
+Sh "5" C 2.2 2.2 0 0 0
+Dr 1.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 9.5 -2.5
+$EndPAD
+$PAD
+Sh "" C 0.65 0.65 0 0 0
+Dr 0.625 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 9.5 0
+$EndPAD
+$EndMODULE SJ1-352XNG
+$EndLIBRARY
