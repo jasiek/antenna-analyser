@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 June 24, Wednesday 22:07:07
+Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 June 26, Friday 23:31:01
 
 BeginCmp
 TimeStamp = /557093CE;
@@ -64,6 +64,13 @@ IdModule  = sop8:SOP-8;
 EndCmp
 
 BeginCmp
+TimeStamp = /558DD335;
+Reference = IC2;
+ValeurCmp = ARDUINO_PRO_MINI_5V;
+IdModule  = arduino pro mini:ARDUINO_PRO_MINI;
+EndCmp
+
+BeginCmp
 TimeStamp = /5571FE39;
 Reference = P1;
 ValeurCmp = CONN_01X10;
@@ -82,13 +89,6 @@ TimeStamp = /55720267;
 Reference = P3;
 ValeurCmp = CONN_01X04;
 IdModule  = Pin_Headers:Pin_Header_Straight_1x04;
-EndCmp
-
-BeginCmp
-TimeStamp = /55720A97;
-Reference = P4;
-ValeurCmp = CONN_01X02;
-IdModule  = Pin_Headers:Pin_Header_Straight_1x02;
 EndCmp
 
 BeginCmp
@@ -173,6 +173,13 @@ TimeStamp = /558B1D24;
 Reference = SMA_E1;
 ValeurCmp = SMA_EDGE;
 IdModule  = SMA_EDGE:SMA_EDGE;
+EndCmp
+
+BeginCmp
+TimeStamp = /558DD50C;
+Reference = U1;
+ValeurCmp = AMS1117;
+IdModule  = SOT223:SOT223;
 EndCmp
 
 EndListe
