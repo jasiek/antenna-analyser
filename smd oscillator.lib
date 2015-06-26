@@ -1,0 +1,17 @@
+EESchema-LIBRARY Version 2.2  Date: 30/11/2011-16:07:25
+#
+# smd oscillator
+#
+DEF smd oscillator U 0 40 Y Y 1 0 N
+F0 "Q" 0 -100 50 H V C C
+F1 "smd oscillator" 0 100 50 H V C C
+DRAW
+S -500 -200 500 200 0 0 0 N
+X CE 1 -800 0 300 R 50 50 1 1 I
+X GND 2 0 -500 300 U 50 50 1 1 I
+X OUT 3 800 0 300 L 50 50 1 1 I
+X Vdd 4 0 500 300 D 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
