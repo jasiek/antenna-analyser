@@ -1,0 +1,108 @@
+PCBNEW-LibModule-V1
+# encoding utf-8
+Units mm
+$INDEX
+SDCARD
+$EndINDEX
+#
+# URL: http://kicadcloud.com/pcbModule/26
+#
+$MODULE SDCARD
+Po 0 0 0 15 50D129EE 00000000 ~~
+Li SDCARD
+Sc 0
+AR
+Op 0 0 0
+T0 3 13 1 1 0 0.15 N V 21 N "SDCARD"
+T1 -6 13 1 1 0 0.15 N V 21 N "VAL**"
+DS -8.51 -4.6 -8.51 10.7 0.15 21
+DS -8.51 10.7 5.49 10.7 0.15 21
+DS -8.51 -4.6 -4.06 -4.6 0.15 21
+DS -4.06 -4.6 -4.06 -2.9 0.15 21
+DS -4.06 -2.9 5.49 -2.9 0.15 21
+DS 5.49 -2.9 5.49 10.7 0.15 21
+$PAD
+Sh "1" R 0.8 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3.85 0
+$EndPAD
+$PAD
+Sh "2" R 0.8 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.75 0.4
+$EndPAD
+$PAD
+Sh "3" R 0.8 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.65 0
+$EndPAD
+$PAD
+Sh "4" R 0.8 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.55 -0.2
+$EndPAD
+$PAD
+Sh "5" R 0.8 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.55 0
+$EndPAD
+$PAD
+Sh "6" R 0.8 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.65 -0.2
+$EndPAD
+$PAD
+Sh "7" R 0.8 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.75 0
+$EndPAD
+$PAD
+Sh "8" R 0.8 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.85 0
+$EndPAD
+$PAD
+Sh "9" R 1.4 1.9 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -8.11 -3.85
+$EndPAD
+$PAD
+Sh "9" R 1.4 1.9 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 5.04 -2.85
+$EndPAD
+$PAD
+Sh "9" R 1.8 1.4 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.04 10.3
+$EndPAD
+$PAD
+Sh "9" R 1.8 1.4 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.66 10.3
+$EndPAD
+$EndMODULE SDCARD

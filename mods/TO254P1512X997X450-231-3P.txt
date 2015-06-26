@@ -1,0 +1,13 @@
+MountStyle: Horizontal
+P: 2.54mm
+PinPackage: 3
+S: 0mm
+L: 19.05mm
+T1: 0.36mm - 0.64mm
+W: 0.64mm - 0.91mm
+T2: 5.97mm - 6.47mm
+A: 9.66mm - 10.28mm
+B: 8.51mm - 9.28mm
+H: 4.50mm
+M: 2.54mm - 3.05mm
+d: 3.61mm - 4.09mm

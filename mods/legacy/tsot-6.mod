@@ -1,0 +1,80 @@
+PCBNEW-LibModule-V1
+# encoding utf-8
+Units deci-mils
+$INDEX
+tsot-6
+$EndINDEX
+#
+# URL: http://kicadcloud.com/pcbModule/3712
+#
+$MODULE tsot-6
+Po 0 0 0 15 50BDEA11 00000000 ~~
+Li tsot-6
+Cd TSOT-6
+Sc 0
+AR
+Op 0 0 0
+At SMD
+T0 0 -118 197 197 0 39 N V 21 N "TSOT-6"
+T1 0 157 197 197 0 39 N I 21 N "Q***"
+DS 591 335 -591 335 50 21
+DS -591 335 -591 -335 50 21
+DS -591 -335 591 -335 50 21
+DS 591 -335 591 335 50 21
+DS -335 334 -590 79 50 21
+DS -395 334 -590 139 50 21
+DS 0 -338 0 -598 50 21
+DS 375 -338 375 -598 50 21
+DS -375 -338 -375 -598 50 21
+DS 0 338 0 598 50 21
+DS 375 338 375 598 50 21
+DS -375 338 -375 598 50 21
+$PAD
+Sh "1" R 272 394 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -374 512
+$EndPAD
+$PAD
+Sh "3" R 272 394 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 374 512
+$EndPAD
+$PAD
+Sh "2" R 272 394 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 512
+$EndPAD
+$PAD
+Sh "4" R 272 394 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 374 -512
+$EndPAD
+$PAD
+Sh "6" R 272 394 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -374 -512
+$EndPAD
+$PAD
+Sh "5" R 272 394 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -512
+$EndPAD
+$SHAPE3D
+Na "smd/smd_transistors/tsot-6.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE tsot-6

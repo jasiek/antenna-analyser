@@ -1,0 +1,47 @@
+PCBNEW-LibModule-V1
+# encoding utf-8
+Units mm
+$INDEX
+R5
+$EndINDEX
+#
+# URL: http://kicadcloud.com/pcbModule/3387
+#
+$MODULE R5
+Po 0 0 0 15 00200000 00000000 ~~
+Li R5
+Cd Resistance 5 pas
+Kw R
+Sc 0
+AR
+Op 0 A 0
+T0 0 0 1.397 1.27 0 0.2032 N V 21 N "R5"
+T1 0 0 1.397 1.27 0 0.2032 N I 21 N "Val*"
+DS -6.35 0 -5.334 0 0.3048 21
+DS 6.35 0 5.334 0 0.3048 21
+DS 5.334 -1.27 5.334 1.27 0.3048 21
+DS 5.334 1.27 -5.334 1.27 0.3048 21
+DS -5.334 1.27 -5.334 -1.27 0.3048 21
+DS -5.334 -1.27 5.334 -1.27 0.3048 21
+DS -5.334 -0.762 -4.826 -1.27 0.3048 21
+$PAD
+Sh "1" C 1.524 1.524 0 0 0
+Dr 0.8128 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -6.35 0
+$EndPAD
+$PAD
+Sh "2" C 1.524 1.524 0 0 0
+Dr 0.8128 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 6.35 0
+$EndPAD
+$SHAPE3D
+Na "discret/resistor.wrl"
+Sc 0.5 0.5 0.5
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE R5

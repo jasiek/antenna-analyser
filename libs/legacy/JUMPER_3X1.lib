@@ -1,0 +1,18 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+# JUMPER_3X1
+# URL: http://kicadcloud.com/schematicSymbol/6
+#
+DEF JUMPER_3X1 JP 0 40 Y Y 1 F N
+F0 "JP" -50 150 60 H V C CNN
+F1 "JUMPER_3X1" 0 -200 60 H V C CNN
+DRAW
+C -50 -50 15 0 1 0 N
+C -50 0 15 0 1 0 N
+C -50 50 15 0 1 0 N
+S -100 100 0 -100 0 1 0 N
+X ~ 1 -200 50 100 R 50 50 1 1 B
+X ~ 2 100 0 100 L 50 50 1 1 B
+X ~ 3 -200 -50 100 R 50 50 1 1 B
+ENDDRAW
+ENDDEF

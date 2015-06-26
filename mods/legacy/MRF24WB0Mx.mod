@@ -1,0 +1,279 @@
+PCBNEW-LibModule-V1
+# encoding utf-8
+Units mm
+$INDEX
+MRF24WB0Mx
+$EndINDEX
+#
+# URL: http://kicadcloud.com/pcbModule/22
+#
+$MODULE MRF24WB0Mx
+Po 0 0 0 15 50D12182 00000000 ~~
+Li MRF24WB0Mx
+Sc 0
+AR
+Op 0 0 0
+T0 0 16.51 1 1 0 0.15 N V 21 N "MRF24WB0Mx"
+T1 0 -16.51 1 1 0 0.15 N V 21 N "VAL**"
+DC -8.128 -13.208 -7.62 -12.7 0.15 21
+DS -21.1 4.65 3.9 4.65 0.15 25
+DS 3.9 4.65 3.9 24.15 0.15 25
+DS 3.9 24.15 -21.1 24.15 0.15 25
+DS -21.1 24.15 -21.1 4.65 0.15 25
+DS -10.5 -15.5 10.5 -15.5 0.15 21
+DS 10.5 -15.5 10.5 15.5 0.15 21
+DS 10.5 15.5 -10.5 15.5 0.15 21
+DS -10.5 15.5 -10.5 -15.5 0.15 21
+$PAD
+Sh "1" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 -13.77
+$EndPAD
+$PAD
+Sh "2" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 -12.5
+$EndPAD
+$PAD
+Sh "3" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 -11.23
+$EndPAD
+$PAD
+Sh "4" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 -9.96
+$EndPAD
+$PAD
+Sh "5" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 -8.69
+$EndPAD
+$PAD
+Sh "6" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 -7.42
+$EndPAD
+$PAD
+Sh "7" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 -6.15
+$EndPAD
+$PAD
+Sh "8" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 -4.88
+$EndPAD
+$PAD
+Sh "9" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 -3.61
+$EndPAD
+$PAD
+Sh "10" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 -2.34
+$EndPAD
+$PAD
+Sh "11" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 -1.07
+$EndPAD
+$PAD
+Sh "12" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 0.2
+$EndPAD
+$PAD
+Sh "13" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 1.47
+$EndPAD
+$PAD
+Sh "14" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 2.74
+$EndPAD
+$PAD
+Sh "15" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 4.01
+$EndPAD
+$PAD
+Sh "16" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 5.28
+$EndPAD
+$PAD
+Sh "17" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 6.55
+$EndPAD
+$PAD
+Sh "18" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -10.275 7.82
+$EndPAD
+$PAD
+Sh "19" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 7.82
+$EndPAD
+$PAD
+Sh "20" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 6.55
+$EndPAD
+$PAD
+Sh "21" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 5.28
+$EndPAD
+$PAD
+Sh "22" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 4.01
+$EndPAD
+$PAD
+Sh "23" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 2.74
+$EndPAD
+$PAD
+Sh "24" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 1.47
+$EndPAD
+$PAD
+Sh "25" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 0.2
+$EndPAD
+$PAD
+Sh "26" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 -1.07
+$EndPAD
+$PAD
+Sh "27" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 -2.34
+$EndPAD
+$PAD
+Sh "28" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 -3.61
+$EndPAD
+$PAD
+Sh "29" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 -4.88
+$EndPAD
+$PAD
+Sh "30" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 -6.15
+$EndPAD
+$PAD
+Sh "31" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 -7.42
+$EndPAD
+$PAD
+Sh "32" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 -8.69
+$EndPAD
+$PAD
+Sh "33" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 -9.96
+$EndPAD
+$PAD
+Sh "34" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 -11.23
+$EndPAD
+$PAD
+Sh "35" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 -12.5
+$EndPAD
+$PAD
+Sh "36" R 0.85 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.275 -13.77
+$EndPAD
+$EndMODULE MRF24WB0Mx

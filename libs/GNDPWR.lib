@@ -1,0 +1,16 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# GNDPWR
+#
+DEF GNDPWR #PWR 0 0 N N 1 F P
+F0 "#PWR" 0 50 40 H I C CNN
+F1 "GNDPWR" 0 -80 40 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+P 3 0 1 0  -40 0  0 -40  40 0 N
+P 3 0 1 0  40 0  -40 0  -40 0 N
+X GNDPWR 1 0 0 0 U 40 40 1 1 W N
+ENDDRAW
+ENDDEF

@@ -1,0 +1,20 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+# Csmall
+# URL: http://kicadcloud.com/schematicSymbol/4325
+#
+DEF Csmall C 0 10 N Y 1 F N
+F0 "C" 25 50 30 H V L CNN
+F1 "Csmall" 25 -50 30 H V L CNN
+$FPLIST
+SM*
+C?
+C1-1
+$ENDFPLIST
+DRAW
+P 2 0 1 0  -50 -10  50 -10 N
+P 2 0 1 0  50 10  -50 10 N
+X ~ 1 0 100 90 D 40 40 1 1 P
+X ~ 2 0 -100 90 U 40 40 1 1 P
+ENDDRAW
+ENDDEF

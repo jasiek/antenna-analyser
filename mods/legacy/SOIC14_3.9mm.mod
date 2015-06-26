@@ -1,0 +1,118 @@
+PCBNEW-LibModule-V1
+# encoding utf-8
+Units mm
+$INDEX
+SOIC14_3.9mm
+$EndINDEX
+$MODULE SOIC14_3.9mm
+Po 0 0 0 15 51AEBBD9 00000000 ~~
+Li SOIC14_3.9mm
+Sc 0
+AR
+Op 0 0 0
+T0 5.3 0 1 1 900 0.15 N V 21 N "SOIC14"
+T1 -5.4 0 1 1 900 0.15 N V 21 N "VAL**"
+DC -3.8 1.1 -3.5 1.3 0.15 21
+DS -4.375 -1.8 4.375 -1.8 0.15 21
+DS 4.375 -1.8 4.375 1.8 0.15 21
+DS 4.375 1.8 -4.375 1.8 0.15 21
+DS -4.375 1.8 -4.375 -1.8 0.15 21
+$PAD
+Sh "1" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3.81 2.8
+$EndPAD
+$PAD
+Sh "2" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.54 2.8
+$EndPAD
+$PAD
+Sh "3" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.27 2.8
+$EndPAD
+$PAD
+Sh "4" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 2.8
+$EndPAD
+$PAD
+Sh "5" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.27 2.8
+$EndPAD
+$PAD
+Sh "6" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.54 2.8
+$EndPAD
+$PAD
+Sh "7" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.81 2.8
+$EndPAD
+$PAD
+Sh "8" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.81 -2.8
+$EndPAD
+$PAD
+Sh "9" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.54 -2.8
+$EndPAD
+$PAD
+Sh "10" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.27 -2.8
+$EndPAD
+$PAD
+Sh "11" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -2.8
+$EndPAD
+$PAD
+Sh "12" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.27 -2.8
+$EndPAD
+$PAD
+Sh "13" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.54 -2.8
+$EndPAD
+$PAD
+Sh "14" R 0.65 1.7 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3.81 -2.8
+$EndPAD
+$EndMODULE SOIC14_3.9mm

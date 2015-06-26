@@ -1,0 +1,68 @@
+PCBNEW-LibModule-V1
+# encoding utf-8
+Units mm
+$INDEX
+TO254P1512X997X450-123-3P
+$EndINDEX
+# MountStyle: Horizontal
+# P: 2.54mm
+# PinPackage: 3
+# S: 0mm
+# L: 19.05mm
+# T1: 0.36mm - 0.64mm
+# W: 0.64mm - 0.91mm
+# T2: 5.97mm - 6.47mm
+# A: 9.66mm - 10.28mm
+# B: 8.51mm - 9.28mm
+# H: 4.50mm
+# M: 2.54mm - 3.05mm
+# d: 3.61mm - 4.09mm
+$MODULE TO254P1512X997X450-123-3P
+Po 0 0 0 15 521D3731 00000000 ~~
+Li TO254P1512X997X450-123-3P
+Sc 0
+AR
+Op 0 0 0
+T0 11 9.5 1 1 0 0.15 N V 21 N "TO254P1512X997X450-123-3P"
+T1 3.5 -1.5 1 1 0 0.15 N V 21 N "VAL**"
+DS -1.2 -3.21 23 -3.21 0.1 25
+DS 23 -3.21 23 8.29 0.1 25
+DS 23 8.29 -1.2 8.29 0.1 25
+DS -1.2 8.29 -1.2 -3.21 0.1 25
+DS 22.7 -2.96 22.7 8 0.1 21
+DS 5.9 8 22.7 8 0.1 21
+DS 5.9 8 5.9 -2.96 0.1 21
+DS 5.9 -2.96 22.7 -2.96 0.1 21
+DS 5.9 5 1.5 5 0.1 21
+DS 1.5 2.5 5.9 2.5 0.1 21
+DS 1.5 0 5.9 0 0.1 21
+$PAD
+Sh "1" R 1.65 1.65 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" C 1.65 1.65 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 2.54
+$EndPAD
+$PAD
+Sh "3" C 1.65 1.65 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 5.08
+$EndPAD
+$PAD
+Sh "4" R 16.05 10.3 0 0 0
+Dr 4.09 -4.75 0
+At STD N 00A0FFFF
+Ne 0 ""
+Po 19.05 2.54
+$EndPAD
+$EndMODULE TO254P1512X997X450-123-3P
+$EndLIBRARY

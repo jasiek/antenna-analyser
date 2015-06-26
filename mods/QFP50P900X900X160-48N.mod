@@ -1,0 +1,363 @@
+PCBNEW-LibModule-V1
+# encoding utf-8
+Units mm
+$INDEX
+QFP50P900X900X160-48N
+$EndINDEX
+$MODULE QFP50P900X900X160-48N
+Po 0 0 0 15 524870D6 00000000 ~~
+Li QFP50P900X900X160-48N
+Sc 0
+AR
+Op 0 0 0
+.LocalClearance 0.2
+T0 0 5.715 0.6 0.6 0 0.1 N V 21 N "QFP50P900X900X160-48N"
+T1 0 0 0.6 0.6 0 0.1 N V 21 N "VAL**"
+DC -4.8 -3.5 -4.7 -3.5 0.25 21
+DC -2.5 -2.5 -2.3 -2.5 0.4 21
+DS -5.25 -5.25 5.25 -5.25 0.1 25
+DS 5.25 -5.25 5.25 5.25 0.1 25
+DS 5.25 5.25 -5.25 5.25 0.1 25
+DS -5.25 5.25 -5.25 -5.25 0.1 25
+DS -3.2 -3.2 3.2 -3.2 0.1 21
+DS 3.2 -3.2 3.2 3.2 0.1 21
+DS 3.2 3.2 -3.2 3.2 0.1 21
+DS -3.2 3.2 -3.2 -3.2 0.1 21
+$PAD
+Sh "1" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.25 -2.75
+$EndPAD
+$PAD
+Sh "2" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.25 -2.25
+$EndPAD
+$PAD
+Sh "3" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.25 -1.75
+$EndPAD
+$PAD
+Sh "4" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.25 -1.25
+$EndPAD
+$PAD
+Sh "5" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.25 -0.75
+$EndPAD
+$PAD
+Sh "6" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.25 -0.25
+$EndPAD
+$PAD
+Sh "7" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.25 0.25
+$EndPAD
+$PAD
+Sh "8" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.25 0.75
+$EndPAD
+$PAD
+Sh "9" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.25 1.25
+$EndPAD
+$PAD
+Sh "10" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.25 1.75
+$EndPAD
+$PAD
+Sh "11" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.25 2.25
+$EndPAD
+$PAD
+Sh "12" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4.25 2.75
+$EndPAD
+$PAD
+Sh "13" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.75 4.25
+$EndPAD
+$PAD
+Sh "14" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.25 4.25
+$EndPAD
+$PAD
+Sh "15" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.75 4.25
+$EndPAD
+$PAD
+Sh "16" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.25 4.25
+$EndPAD
+$PAD
+Sh "17" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.75 4.25
+$EndPAD
+$PAD
+Sh "18" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.25 4.25
+$EndPAD
+$PAD
+Sh "19" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.25 4.25
+$EndPAD
+$PAD
+Sh "20" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.75 4.25
+$EndPAD
+$PAD
+Sh "21" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.25 4.25
+$EndPAD
+$PAD
+Sh "22" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.75 4.25
+$EndPAD
+$PAD
+Sh "23" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.25 4.25
+$EndPAD
+$PAD
+Sh "24" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.75 4.25
+$EndPAD
+$PAD
+Sh "25" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.25 2.75
+$EndPAD
+$PAD
+Sh "26" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.25 2.25
+$EndPAD
+$PAD
+Sh "27" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.25 1.75
+$EndPAD
+$PAD
+Sh "28" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.25 1.25
+$EndPAD
+$PAD
+Sh "29" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.25 0.75
+$EndPAD
+$PAD
+Sh "30" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.25 0.25
+$EndPAD
+$PAD
+Sh "31" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.25 -0.25
+$EndPAD
+$PAD
+Sh "32" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.25 -0.75
+$EndPAD
+$PAD
+Sh "33" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.25 -1.25
+$EndPAD
+$PAD
+Sh "34" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.25 -1.75
+$EndPAD
+$PAD
+Sh "35" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.25 -2.25
+$EndPAD
+$PAD
+Sh "36" R 1.45 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4.25 -2.75
+$EndPAD
+$PAD
+Sh "37" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.75 -4.25
+$EndPAD
+$PAD
+Sh "38" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.25 -4.25
+$EndPAD
+$PAD
+Sh "39" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.75 -4.25
+$EndPAD
+$PAD
+Sh "40" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.25 -4.25
+$EndPAD
+$PAD
+Sh "41" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.75 -4.25
+$EndPAD
+$PAD
+Sh "42" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.25 -4.25
+$EndPAD
+$PAD
+Sh "43" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.25 -4.25
+$EndPAD
+$PAD
+Sh "44" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.75 -4.25
+$EndPAD
+$PAD
+Sh "45" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.25 -4.25
+$EndPAD
+$PAD
+Sh "46" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.75 -4.25
+$EndPAD
+$PAD
+Sh "47" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.25 -4.25
+$EndPAD
+$PAD
+Sh "48" R 0.3 1.45 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.75 -4.25
+$EndPAD
+$EndMODULE QFP50P900X900X160-48N
+$EndLIBRARY

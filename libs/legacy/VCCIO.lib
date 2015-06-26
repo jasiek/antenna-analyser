@@ -1,0 +1,14 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+# VCCIO
+# URL: http://kicadcloud.com/schematicSymbol/4328
+#
+DEF VCCIO #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 100 30 H I C CNN
+F1 "VCCIO" 0 100 30 H V C CNN
+DRAW
+X VCCIO 1 0 0 0 U 20 20 0 0 W N
+C 0 50 20 0 1 0 N
+P 3 0 1 0  0 0  0 30  0 30 N
+ENDDRAW
+ENDDEF

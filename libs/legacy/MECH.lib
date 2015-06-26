@@ -1,0 +1,11 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+# MECH
+# URL: http://kicadcloud.com/schematicSymbol/7
+#
+DEF MECH M 0 40 Y Y 1 F N
+F0 "M" 50 0 60 H V C CNN
+F1 "MECH" 200 0 60 H V L CNN
+DRAW
+ENDDRAW
+ENDDEF

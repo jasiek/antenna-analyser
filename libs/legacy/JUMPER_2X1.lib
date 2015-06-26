@@ -1,0 +1,16 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+# JUMPER_2X1
+# URL: http://kicadcloud.com/schematicSymbol/5
+#
+DEF JUMPER_2X1 JP 0 40 Y Y 1 F N
+F0 "JP" 0 100 60 H V C CNN
+F1 "JUMPER_2X1" 0 -100 60 H V C CNN
+DRAW
+S -100 50 100 -50 0 0 0 N
+C -50 0 15 0 1 0 N
+C 50 0 15 0 1 0 N
+X ~ 1 -200 0 100 R 50 50 1 1 B
+X ~ 2 200 0 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF

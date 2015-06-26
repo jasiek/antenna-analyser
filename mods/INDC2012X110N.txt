@@ -1,0 +1,6 @@
+Family: Inductor
+L: 1.8mm - 2.2mm
+T1: 0.26mm - 0.76mm
+T2: 0.26mm - 0.76mm
+W: 1.05mm - 1.45mm
+H: 1.10mm
