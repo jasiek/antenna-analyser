@@ -1,4 +1,4 @@
-update=2015 June 26, Friday 23:26:46
+update=2015 June 28, Sunday 00:42:35
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,3 +62,4 @@ LibName30=libs/0xANDREW/arduino
 LibName31=libs/0xANDREW/misc
 LibName32=libs/JOS_SMA_connectors/sma_edge
 LibName33=libs/nekromant/AMS1117
+LibName34=libs/ad9850_conn
