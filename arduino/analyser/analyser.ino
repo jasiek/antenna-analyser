@@ -8,6 +8,8 @@ void setup() {
   Serial.begin(57600);
   tft.begin();
   Serial.println("Width: " + String(tft.width()) + " Height: " + String(tft.height()));
+  tft.fillScreen(ILI9341_BLACK);
+  tft.drawPixel(0, 0, ILI9341_GREEN);
 }
 
 void loop() {
@@ -19,17 +21,17 @@ void drawSWRPlot(float begin, float end) {
   float f = begin; // kHz
   float ystep = tft.width() / 64;
 
-  for (int x = 0; x < tft.height(); x++) {
+  for (int x = tft.height(); x >= 0; --x) {
     float swr = measureSWR(f);
-    int y = tft.height() - swr * ystep;
-    tft.drawPixel(y, x, ILI9341_BLACK);
+    int y = tft.width() - swr * ystep;
+    tft.drawPixel(y, x, ILI9341_WHITE);
     
     f += xstep;
   }
 }
 
 float measureSWR(float f) {
-  return 32; 
+  return (f - 135) * (f - 135); 
 }
 
 
