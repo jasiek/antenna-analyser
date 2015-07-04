@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 June 28, Sunday 01:19:18
+Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 July 04, Saturday 12:50:57
 
 BeginCmp
 TimeStamp = /557093CE;
@@ -74,7 +74,14 @@ BeginCmp
 TimeStamp = /558F3F74;
 Reference = P1;
 ValeurCmp = AD9850_CONN;
-IdModule  = Pin_Headers:Pin_Header_Straight_1x10;
+IdModule  = dds-module-ad9850:DDS_AD9850;
+EndCmp
+
+BeginCmp
+TimeStamp = /55904C18;
+Reference = P2;
+ValeurCmp = CONN_LCD;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x15;
 EndCmp
 
 BeginCmp
@@ -190,10 +197,24 @@ IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
+TimeStamp = /5597D6A6;
+Reference = S2;
+ValeurCmp = ENCODER;
+IdModule  = Buttons_Switches_ThroughHole:SW_Micro_SPST;
+EndCmp
+
+BeginCmp
 TimeStamp = /558B1D24;
 Reference = SMA_E1;
 ValeurCmp = SMA_EDGE;
 IdModule  = SMA_EDGE:SMA_EDGE;
+EndCmp
+
+BeginCmp
+TimeStamp = /5597D09C;
+Reference = SW1;
+ValeurCmp = SPST;
+IdModule  = Buttons_Switches_ThroughHole:SW_PUSH_SMALL;
 EndCmp
 
 BeginCmp
