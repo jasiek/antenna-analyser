@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ALPS-STEC12E08
+D Rotary encoder with switch
+K encoder, rotary, switch
+$ENDCMP
+#
+#End Doc Library
