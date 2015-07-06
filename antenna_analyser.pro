@@ -1,4 +1,4 @@
-update=2015 July 04, Saturday 12:41:05
+update=2015 July 06, Monday 01:01:49
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,4 +63,3 @@ LibName31=libs/0xANDREW/misc
 LibName32=libs/JOS_SMA_connectors/sma_edge
 LibName33=libs/nekromant/AMS1117
 LibName34=libs/ad9850_conn
-LibName35=libs/KM_rotary-switch/switch-enc
