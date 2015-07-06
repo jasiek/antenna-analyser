@@ -4,4 +4,5 @@
   (lib (name dds-module-ad9850)(type Eagle)(uri "$(KIPRJMOD)/libs/dds-module-ad9850.lbr")(options "")(descr ""))
   (lib (name SOT223)(type Legacy)(uri "$(KIPRJMOD)/libs/joeferner/mods/legacy/SOT223.mod")(options "")(descr ""))
   (lib (name "arduino pro mini")(type Legacy)(uri "$(KIPRJMOD)/libs/arduino pro mini.mod")(options "")(descr ""))
+  (lib (name Rotary-Encoders)(type KiCad)(uri "$(KIPRJMOD)/libs/Rotary-Encoders.pretty")(options "")(descr ""))
 )

@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 July 04, Saturday 12:50:57
+Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 July 06, Monday 01:16:21
 
 BeginCmp
 TimeStamp = /557093CE;
@@ -82,6 +82,13 @@ TimeStamp = /55904C18;
 Reference = P2;
 ValeurCmp = CONN_LCD;
 IdModule  = Pin_Headers:Pin_Header_Straight_1x15;
+EndCmp
+
+BeginCmp
+TimeStamp = /5599C8E1;
+Reference = P3;
+ValeurCmp = CONN_01X05;
+IdModule  = Rotary-Encoders:BI_EN11-HSM1AF15;
 EndCmp
 
 BeginCmp
@@ -197,24 +204,10 @@ IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
 EndCmp
 
 BeginCmp
-TimeStamp = /5597D6A6;
-Reference = S2;
-ValeurCmp = ENCODER;
-IdModule  = Buttons_Switches_ThroughHole:SW_Micro_SPST;
-EndCmp
-
-BeginCmp
 TimeStamp = /558B1D24;
 Reference = SMA_E1;
 ValeurCmp = SMA_EDGE;
 IdModule  = SMA_EDGE:SMA_EDGE;
-EndCmp
-
-BeginCmp
-TimeStamp = /5597D09C;
-Reference = SW1;
-ValeurCmp = SPST;
-IdModule  = Buttons_Switches_ThroughHole:SW_PUSH_SMALL;
 EndCmp
 
 BeginCmp
