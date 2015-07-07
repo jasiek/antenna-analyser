@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 July 07, Tuesday 08:10:48
+Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = Tuesday, 07 July 2015 17:45:15
 
 BeginCmp
 TimeStamp = /557093CE;
@@ -71,9 +71,9 @@ IdModule  = sop8:SOP-8;
 EndCmp
 
 BeginCmp
-TimeStamp = /558DD335;
+TimeStamp = /559C1201;
 Reference = IC2;
-ValeurCmp = ARDUINO_PRO_MINI_5V;
+ValeurCmp = ARDUINO_PRO_MINI_3.3V;
 IdModule  = arduino pro mini:ARDUINO_PRO_MINI;
 EndCmp
 
@@ -88,7 +88,7 @@ BeginCmp
 TimeStamp = /55904C18;
 Reference = P2;
 ValeurCmp = CONN_LCD;
-IdModule  = Pin_Headers:Pin_Header_Straight_1x15;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x15;
 EndCmp
 
 BeginCmp
