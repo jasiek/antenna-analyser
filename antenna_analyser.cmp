@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 July 06, Monday 01:16:21
+Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 July 07, Tuesday 08:10:48
 
 BeginCmp
 TimeStamp = /557093CE;
@@ -57,6 +57,13 @@ IdModule  = Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10;
 EndCmp
 
 BeginCmp
+TimeStamp = /559B7A1A;
+Reference = ENC1;
+ValeurCmp = BI_EN11-HSM1AF15;
+IdModule  = Rotary-Encoders:BI_EN12-HS22AF30;
+EndCmp
+
+BeginCmp
 TimeStamp = /55720929;
 Reference = IC1;
 ValeurCmp = MCP6002;
@@ -82,13 +89,6 @@ TimeStamp = /55904C18;
 Reference = P2;
 ValeurCmp = CONN_LCD;
 IdModule  = Pin_Headers:Pin_Header_Straight_1x15;
-EndCmp
-
-BeginCmp
-TimeStamp = /5599C8E1;
-Reference = P3;
-ValeurCmp = CONN_01X05;
-IdModule  = Rotary-Encoders:BI_EN11-HSM1AF15;
 EndCmp
 
 BeginCmp

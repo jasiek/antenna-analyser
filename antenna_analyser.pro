@@ -1,4 +1,4 @@
-update=2015 July 06, Monday 01:01:49
+update=2015 July 07, Tuesday 07:59:13
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,3 +63,4 @@ LibName31=libs/0xANDREW/misc
 LibName32=libs/JOS_SMA_connectors/sma_edge
 LibName33=libs/nekromant/AMS1117
 LibName34=libs/ad9850_conn
+LibName35=libs/Rotary-Encoders.pretty/Schematic-Symbols/Rotary-Encoders
