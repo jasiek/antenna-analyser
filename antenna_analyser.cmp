@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = Tuesday, 07 July 2015 17:45:15
+Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = Tuesday, 07 July 2015 18:13:13
 
 BeginCmp
 TimeStamp = /557093CE;
@@ -89,6 +89,20 @@ TimeStamp = /55904C18;
 Reference = P2;
 ValeurCmp = CONN_LCD;
 IdModule  = Socket_Strips:Socket_Strip_Straight_1x15;
+EndCmp
+
+BeginCmp
+TimeStamp = /559C0ACF;
+Reference = P3;
+ValeurCmp = CONN_01X02;
+IdModule  = Wire_Pads:SolderWirePad_2x_1mmDrill;
+EndCmp
+
+BeginCmp
+TimeStamp = /559C17A6;
+Reference = P4;
+ValeurCmp = BNC;
+IdModule  = Wire_Pads:SolderWirePad_2x_1mmDrill;
 EndCmp
 
 BeginCmp
@@ -201,13 +215,6 @@ TimeStamp = /558F6DB4;
 Reference = R16;
 ValeurCmp = 10k;
 IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
-EndCmp
-
-BeginCmp
-TimeStamp = /558B1D24;
-Reference = SMA_E1;
-ValeurCmp = SMA_EDGE;
-IdModule  = SMA_EDGE:SMA_EDGE;
 EndCmp
 
 BeginCmp

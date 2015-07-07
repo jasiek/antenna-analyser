@@ -1,6 +1,6 @@
-update=2015 July 07, Tuesday 07:59:13
+update=Tuesday, 07 July 2015 17:59:39
 version=1
-last_client=kicad
+last_client=eeschema
 [pcbnew]
 version=1
 LastNetListRead=
@@ -64,3 +64,13 @@ LibName32=libs/JOS_SMA_connectors/sma_edge
 LibName33=libs/nekromant/AMS1117
 LibName34=libs/ad9850_conn
 LibName35=libs/Rotary-Encoders.pretty/Schematic-Symbols/Rotary-Encoders
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
