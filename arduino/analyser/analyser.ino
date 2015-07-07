@@ -13,7 +13,7 @@ const double startOfBand[] = { 135E3, 135.7E3, 1.81E6, 3.5E6,  7E6, 10.1E6,  14E
 const double endOfBand[] =   { 29.7E6, 137.8E3,    2E6, 3.8E6,7.2E6, 10.15E6, 14.35E6, 18.168E6, 21.450E6, 24.99E6, 29.7E6};
 const double steps[] =       { 1E6,    100,    3E3,   3E3,  3E3,    50,   3E3,     3E3,     3E3,    3E3,   6E3};
 
-volatile byte mode = 1;
+volatile byte mode = 0;
 volatile boolean blankScreen = true;
 volatile byte band = 0; 
 volatile double f = startOfBand[band];
