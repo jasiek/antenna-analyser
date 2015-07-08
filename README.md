@@ -10,3 +10,5 @@ to graphically represent the results of VSWR analysis.
 
 I've bundled everything together into one repository so that the project can quickly be opened up in [KiCad](http://www.kicad-pcb.org/)
 and the Arduino IDE.
+
+![Prototype](https://raw.githubusercontent.com/jasiek/antenna-analyser/master/pictures/prototype1.jpg)
