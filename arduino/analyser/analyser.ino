@@ -5,7 +5,8 @@
 
 #define BACKGROUND ILI9341_BLACK
 
-Adafruit_ILI9341 tft = Adafruit_ILI9341(10, 9, 8);
+// Analog pins are used for communication to make the circuit fit on a PCB easier.
+Adafruit_ILI9341 tft = Adafruit_ILI9341(10, A3, A2);
 AD9850 ad9850(7, 6, 5);
 
 const String nameOfBand[] =  { "ALL", "2200m", "160m", "80m", "40m", "30m", "20m",    "17m", "15m",   "12m", "10m"};
