@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Users/jps/github/antenna-analyser/antenna_analyser.sch)
-    (date "2015 July 11, Saturday 14:16:23")
+    (date "2015 July 14, Tuesday 22:30:38")
     (tool "Eeschema (2015-06-03 BZR 5697)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -378,12 +378,12 @@
       (uri /Users/jps/github/antenna-analyser/libs/0xANDREW/arduino.lib))
     (library (logical misc)
       (uri /Users/jps/github/antenna-analyser/libs/0xANDREW/misc.lib))
+    (library (logical Rotary-Encoders)
+      (uri /Users/jps/github/antenna-analyser/libs/Rotary-Encoders.pretty/Schematic-Symbols/Rotary-Encoders.lib))
     (library (logical AMS1117)
       (uri /Users/jps/github/antenna-analyser/libs/nekromant/AMS1117.lib))
     (library (logical ad9850_conn)
-      (uri /Users/jps/github/antenna-analyser/libs/ad9850_conn.lib))
-    (library (logical Rotary-Encoders)
-      (uri /Users/jps/github/antenna-analyser/libs/Rotary-Encoders.pretty/Schematic-Symbols/Rotary-Encoders.lib)))
+      (uri /Users/jps/github/antenna-analyser/libs/ad9850_conn.lib)))
   (nets
     (net (code 1) (name "Net-(IC2-Pad10)")
       (node (ref IC2) (pin 10))
