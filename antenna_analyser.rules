@@ -1,0 +1,98 @@
+
+(rules PCB antenna_analyser
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout on)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 300)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1281)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.0)
+    )
+    (layer_rule In1.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 30.0)
+      (against_preferred_direction_trace_costs 30.0)
+    )
+  )
+  (rule
+    (width 500.0)
+    (clear 250.2)
+    (clear 250.0 (type smd_to_turn_gap))
+    (clear 62.6 (type smd_smd))
+  )
+  (padstack "Via[0-1]_1000:500_um"
+    (shape
+      (circle F.Cu 1000.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 1000.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_1000:500_um" "Via[0-1]_1000:500_um" default
+  )
+  (via 
+    "Via[0-1]_1000:500_um-kicad_default" "Via[0-1]_1000:500_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_1000:500_um-ANT" "Via[0-1]_1000:500_um" ANT
+  )
+  (via_rule
+    default "Via[0-1]_1000:500_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_1000:500_um-kicad_default"
+  )
+  (via_rule
+    ANT "Via[0-1]_1000:500_um-ANT"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 500.0)
+    )
+    (circuit 
+      (use_layer F.Cu In1.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(C1-Pad2)" "Net-(C1-Pad1)" "Net-(C2-Pad1)" "Net-(C3-Pad1)" GND "Net-(C4-Pad1)" +5V "Net-(D1-Pad2)"
+    "Net-(ENC1-PadA)" "Net-(ENC1-PadB)" "Net-(ENC1-PadSW2)" "Net-(P1-Pad4)" "Net-(P1-Pad5)" "Net-(P1-Pad7)" "Net-(P1-Pad8)" "Net-(P1-Pad10)"
+    "Net-(IC1-Pad6)" "Net-(IC1-Pad7)" "Net-(IC1-Pad1)" "Net-(IC1-Pad2)" "Net-(IC2-Pad1)" "Net-(IC2-Pad2)" "Net-(IC2-Pad3)" "Net-(IC2-Pad8)"
+    "Net-(IC2-Pad9)" "Net-(IC2-Pad10)" "Net-(IC2-Pad11)" "Net-(IC2-Pad12)" "Net-(IC2-Pad13)" "Net-(IC2-Pad14)" "Net-(IC2-Pad15)" "Net-(IC2-Pad16)"
+    "Net-(IC2-Pad19)" "Net-(IC2-Pad20)" "Net-(IC2-Pad21)" "Net-(IC2-Pad22)" "Net-(IC2-Pad23)" "Net-(IC2-Pad24)" "Net-(C5-Pad2)" "Net-(P1-Pad20)"
+    "Net-(P1-Pad19)" "Net-(P1-Pad18)" "Net-(P1-Pad17)" "Net-(P1-Pad16)" "Net-(P1-Pad15)" "Net-(P1-Pad14)" "Net-(P1-Pad13)" "Net-(P1-Pad11)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 500.0)
+    )
+    (circuit 
+      (use_layer F.Cu In1.Cu)
+    )
+  )
+  (class ANT
+    "Net-(C5-Pad1)"
+    (clearance_class ANT)
+    (via_rule ANT)
+    (rule
+      (width 1500.0)
+    )
+    (circuit 
+      (use_layer F.Cu In1.Cu)
+    )
+  )
+)
