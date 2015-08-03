@@ -9,12 +9,13 @@
 Adafruit_ILI9341 tft = Adafruit_ILI9341(10, A3, A2);
 AD9850 ad9850(7, 6, 5);
 
-const String nameOfBand[] =  { "ALL", "2200m", "160m", "80m", "40m", "30m", "20m",    "17m", "15m",   "12m", "10m"};
-const double startOfBand[] = { 135E3, 135.7E3, 1.81E6, 3.5E6,  7E6, 10.1E6,  14E6, 18.068E6,  21E6, 24.89E6, 28E6};
-const double endOfBand[] =   { 29.7E6, 137.8E3,    2E6, 3.8E6,7.2E6, 10.15E6, 14.35E6, 18.168E6, 21.450E6, 24.99E6, 29.7E6};
-const double steps[] =       { 1E6,    100,    3E3,   3E3,  3E3,    50,   3E3,     3E3,     3E3,    3E3,   6E3};
+const String nameOfBand[] =  { "ALL",     "2200m",    "160m",     "80m",    "40m",    "30m",    "20m",    "17m",    "15m",      "12m",    "10m"};
+const double startOfBand[] = { 135E3,     135.7E3,    1.81E6,     3.5E6,    7E6,      10.1E6,   14E6,     18.068E6,  21E6,      24.89E6,  28E6};
+const double endOfBand[] =   { 29.7E6,    137.8E3,    2E6,        3.8E6,    7.2E6,    10.15E6,  14.35E6,  18.168E6,  21.450E6,  24.99E6,  29.7E6};
+const double steps[] =       { 1E6,       100,        3E3,        3E3,      3E3,      300,      3E3,      3E3,       3E3,       3E3,      6E3};
+const int numBands = 11;
 
-volatile byte mode = 0;
+volatile byte mode = 1;
 volatile boolean blankScreen = true;
 volatile byte band = 0; 
 volatile double f = startOfBand[band];
@@ -24,13 +25,13 @@ void setup() {
   pinMode(2, INPUT_PULLUP);
   pinMode(3, INPUT_PULLUP);
   pinMode(4, INPUT_PULLUP);
-  attachInterrupt(0, changeMode, FALLING);
-  attachInterrupt(1, changeFrequency, RISING);
+  // attachInterrupt(0, changeMode, FALLING);
+  // attachInterrupt(1, changeFrequency, RISING);
   
   Serial.begin(57600);
   tft.begin();
   Serial.println("Width: " + String(tft.width()) + " Height: " + String(tft.height()));
-  tft.setRotation(3);
+  tft.setRotation(2);
 }
 
 void loop() {
@@ -41,18 +42,29 @@ void loop() {
     blankScreen = false;
   }
 
-  if (mode == 0) {
-    displayFrequency(f, swr);
-  } else {
-    Serial.println("BAND: " + String(band) + ", " + nameOfBand[band]);
-    displayPlot(startOfBand[band], endOfBand[band], nameOfBand[band]);
-  }
+  displaySummary();
 }
 
-// Change screen. No debouncing, this is good enough for now.
-void changeMode() {
-  band = (band + 1) % 11;
+void displaySummary() {
+
+  // for each band display the minimum swr and corresponding frequency
   
+  int i;
+  float swr, f;
+  
+  tft.setTextSize(1);
+
+  tft.setCursor(0, 0);
+  tft.setTextColor(ILI9341_RED, BACKGROUND);
+  for (i = 1; i < numBands; i++) {
+    tft.setCursor(0, i * 8);
+    tft.print(nameOfBand[i]);
+    tft.setCursor(6 * 6, i * 8);
+    findMinimum(startOfBand[i], endOfBand[i], steps[i], &f, &swr);
+    tft.print(f);
+    tft.setCursor(18 * 6, i * 8);
+    tft.print(swr);
+  }
 }
 
 void changeFrequency() {
@@ -143,12 +155,37 @@ void displayPlot(double begin, double end, String label) {
   }
 }
 
+void findMinimum(float begin, float end, float step, float *freq, float *swr) {
+  *freq = 0;
+  *swr = 999;
+
+  float tempswr;
+  for (f = begin; f < end; f += step) {
+    tempswr = measureSWR(f);
+    if (tempswr < *swr) {
+      *swr = tempswr;
+      *freq = f;
+    }
+  }
+}
+
+float averageSWR(float begin, float end, float step) {
+  float swrsum = 0;
+  int count = 0;
+  float f;
+  for (f = begin; f < end; f += step) {
+    swrsum += measureSWR(f);
+    count++;
+  }
+  return swrsum / count;
+}
+
 float measureSWR(float f) {
   float fwd, rev;
   ad9850.setfreq(f);
   delay(10);
-  rev = analogRead(A0);
-  fwd = analogRead(A1);
+  fwd = analogRead(A0);
+  rev = analogRead(A1);
 
   if (rev >= fwd) {
     return 999;
