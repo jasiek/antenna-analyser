@@ -15,23 +15,17 @@ const double endOfBand[] =   { 29.7E6,    137.8E3,    2E6,        3.8E6,    7.2E
 const double steps[] =       { 1E6,       100,        3E3,        3E3,      3E3,      300,      3E3,      3E3,       3E3,       3E3,      6E3};
 const int numBands = 11;
 
-volatile byte mode = 1;
 volatile boolean blankScreen = true;
-volatile byte band = 0; 
-volatile double f = startOfBand[band];
 
 void setup() {
-  // Set up PIN 3 for mode switching via microswitch.
-  pinMode(2, INPUT_PULLUP);
-  pinMode(3, INPUT_PULLUP);
-  pinMode(4, INPUT_PULLUP);
-  // attachInterrupt(0, changeMode, FALLING);
-  // attachInterrupt(1, changeFrequency, RISING);
+  pinMode(2, INPUT_PULLUP); // Rotary encoder CLK
+  pinMode(3, INPUT_PULLUP); // Rotary encoder CLICK
+  pinMode(4, INPUT_PULLUP); // Rotary encoder DATA
   
   Serial.begin(57600);
   tft.begin();
   Serial.println("Width: " + String(tft.width()) + " Height: " + String(tft.height()));
-  tft.setRotation(2);
+  tft.setRotation(3);
 }
 
 void loop() {
@@ -42,7 +36,92 @@ void loop() {
     blankScreen = false;
   }
 
-  displaySummary();
+  userInterfaceLoop();
+}
+
+void userInterfaceLoop() {
+  byte nextUIState = 9;
+  while(1) {
+    switch(nextUIState) {
+      case 9:
+        nextUIState = mainMenu();
+        break;
+      case 0:
+        tft.fillScreen(ILI9341_RED);
+        nextUIState = 9;
+        break;
+      case 1:
+        tft.fillScreen(ILI9341_GREEN);
+        nextUIState = 9;
+        break;
+      case 2:
+        tft.fillScreen(ILI9341_BLUE);
+        nextUIState = 9;
+        break;
+    }
+  }
+}
+
+typedef enum {
+  NONE,
+  CLICK,
+  LEFT,
+  RIGHT
+} Action;
+
+volatile byte mainMenuState;
+byte mainMenu() {
+  tft.setTextSize(2);
+  mainMenuState = 0;
+
+  while (1) {
+    tft.setCursor(0, 0);
+
+    tft.setTextColor(ILI9341_RED, BACKGROUND);
+    if (mainMenuState == 0) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(ILI9341_RED, BACKGROUND); }
+    tft.println("Plot all bands");
+    if (mainMenuState == 1) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(ILI9341_RED, BACKGROUND); }
+    tft.println("Plot single band");
+    if (mainMenuState == 2) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(ILI9341_RED, BACKGROUND); }
+    tft.println("Display summary");
+  
+    switch(awaitAction()) {
+      case CLICK:
+        return mainMenuState;
+      case LEFT:
+        mainMenuState = (mainMenuState - 1) % 3;
+        break;
+      case RIGHT:
+        mainMenuState = (mainMenuState + 1) % 3;
+        break;
+    }
+  }
+}
+
+volatile Action selectedAction;
+byte awaitAction() {
+  selectedAction = NONE;
+  
+  detachInterrupt(0);
+  detachInterrupt(1);
+  attachInterrupt(0, mainMenuClick, CHANGE);
+  attachInterrupt(1, mainMenuMove, CHANGE);
+  interrupts();
+  
+  while (selectedAction == NONE);
+  return selectedAction;
+}
+
+void mainMenuMove() {
+  noInterrupts();
+
+  selectedAction = (digitalRead(4) == LOW) ? LEFT : RIGHT;
+}
+
+void mainMenuClick() {
+  noInterrupts();
+
+  selectedAction = CLICK;
 }
 
 void displaySummary() {
@@ -66,27 +145,6 @@ void displaySummary() {
     tft.print(swr);
   }
 }
-
-void changeFrequency() {
-  switch(digitalRead(4)) {
-    case LOW:
-    f += 10E3;
-    break;
-    case HIGH:
-    f -= 10E3;
-  }
-
-  if (f < 136E3) {
-    f = 28E6;
-    return;
-  }
-
-  if (f > 28E6) {
-    f = 136E3;
-    return;
-  }
-}
-
 
 bool labelsVisible = false;
 void displayFrequency(double f, double swr) {
@@ -159,7 +217,7 @@ void findMinimum(float begin, float end, float step, float *freq, float *swr) {
   *freq = 0;
   *swr = 999;
 
-  float tempswr;
+  float tempswr, f;
   for (f = begin; f < end; f += step) {
     tempswr = measureSWR(f);
     if (tempswr < *swr) {
