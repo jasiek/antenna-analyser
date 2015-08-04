@@ -69,21 +69,27 @@ typedef enum {
   RIGHT
 } Action;
 
-volatile byte mainMenuState;
 byte mainMenu() {
-  tft.setTextSize(2);
-  mainMenuState = 0;
+  byte mainMenuState = 0;
+  tft.setTextSize(1);
+  tft.setTextColor(ILI9341_RED, BACKGROUND);
+  tft.setCursor(10, 0);
+  tft.print("Plot all bands");
+  tft.setCursor(10, 10);
+  tft.println("Plot single band");
+  tft.setCursor(10, 20);
+  tft.println("Display summary");
 
   while (1) {
+    if (mainMenuState == 0) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(BACKGROUND, BACKGROUND); }
     tft.setCursor(0, 0);
-
-    tft.setTextColor(ILI9341_RED, BACKGROUND);
-    if (mainMenuState == 0) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(ILI9341_RED, BACKGROUND); }
-    tft.println("Plot all bands");
-    if (mainMenuState == 1) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(ILI9341_RED, BACKGROUND); }
-    tft.println("Plot single band");
-    if (mainMenuState == 2) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(ILI9341_RED, BACKGROUND); }
-    tft.println("Display summary");
+    tft.print(">");
+    if (mainMenuState == 1) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(BACKGROUND, BACKGROUND); }
+    tft.setCursor(0, 10);
+    tft.print(">");
+    if (mainMenuState == 2) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(BACKGROUND, BACKGROUND); }
+    tft.setCursor(0, 20);
+    tft.print(">");
   
     switch(awaitAction()) {
       case CLICK:
@@ -105,7 +111,7 @@ byte awaitAction() {
   detachInterrupt(0);
   detachInterrupt(1);
   attachInterrupt(0, mainMenuClick, CHANGE);
-  attachInterrupt(1, mainMenuMove, CHANGE);
+  attachInterrupt(1, mainMenuMove, FALLING);
   interrupts();
   
   while (selectedAction == NONE);
@@ -115,7 +121,7 @@ byte awaitAction() {
 void mainMenuMove() {
   noInterrupts();
 
-  selectedAction = (digitalRead(4) == LOW) ? LEFT : RIGHT;
+  selectedAction = (digitalRead(2) == digitalRead(4)) ? LEFT : RIGHT;
 }
 
 void mainMenuClick() {
