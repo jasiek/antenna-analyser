@@ -14,3 +14,12 @@ and the Arduino IDE.
 ![Prototype](https://raw.githubusercontent.com/jasiek/antenna-analyser/master/pictures/prototype1.jpg)
 ![Back of PCB](https://raw.githubusercontent.com/jasiek/antenna-analyser/master/pictures/prototype2.jpg)
 ![Assembled Prototype](https://raw.githubusercontent.com/jasiek/antenna-analyser/master/pictures/prototype3.jpg)
+
+## TODO
+
+* ~~Improve menu structure and navigation.~~
+* Improve single band plot (move band label, min, max to the bottom). Notify the user when done plotting.
+* When plotting all bands, plot amateur bands using a different colour.
+* Improve summary view, label columns, shorten frequency label.
+* Add menu which lists 20 SWR minima across the band.
+
