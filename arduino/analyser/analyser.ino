@@ -9,11 +9,11 @@
 Adafruit_ILI9341 tft = Adafruit_ILI9341(10, A3, A2);
 AD9850 ad9850(7, 6, 5);
 
-const String nameOfBand[] =  { "ALL",     "2200m",    "160m",     "80m",    "40m",    "30m",    "20m",    "17m",    "15m",      "12m",    "10m"   };
-const double startOfBand[] = { 135E3,     135.7E3,    1.81E6,     3.5E6,    7E6,      10.1E6,   14E6,     18.068E6,  21E6,      24.89E6,  28E6    };
-const double endOfBand[] =   { 29.7E6,    137.8E3,    2E6,        3.8E6,    7.2E6,    10.15E6,  14.35E6,  18.168E6,  21.450E6,  24.99E6,  29.7E6  };
-const double steps[] =       { 1E6,       100,        3E3,        3E3,      3E3,      300,      3E3,      3E3,       3E3,       3E3,      6E3     };
-const int numBands = 11;
+const String nameOfBand[] =  { "2200m",    "160m",     "80m",    "40m",    "30m",    "20m",    "17m",    "15m",      "12m",    "10m"   };
+const double startOfBand[] = { 135.7E3,    1.81E6,     3.5E6,    7E6,      10.1E6,   14E6,     18.068E6,  21E6,      24.89E6,  28E6    };
+const double endOfBand[] =   { 137.8E3,    2E6,        3.8E6,    7.2E6,    10.15E6,  14.35E6,  18.168E6,  21.450E6,  24.99E6,  29.7E6  };
+const double steps[] =       { 100,        3E3,        3E3,      3E3,      300,      3E3,      3E3,       3E3,       3E3,      6E3     };
+const int numBands = 10;
 
 // What kind of actions can be performed using the rotary encoder?
 typedef enum {
@@ -35,26 +35,30 @@ void setup() {
 }
 
 void loop() {
-  byte nextUIState = 9;
+  byte nextUIState = 100;
 
   while(1) {
     tft.fillScreen(BACKGROUND);
  
     switch(nextUIState) {
-      case 9:
+      case 100:
         nextUIState = mainMenu();
         break;
-      case 0:
+      case numBands:
         displayAllBands();
-        nextUIState = 9;
+        nextUIState = 100;
         break;
-      case 1:
-        displaySingleBand(chooseBandMenu());
-        nextUIState = 9;
-        break;
-      case 2:
+      case numBands + 1:
         displaySummary();
-        nextUIState = 9;
+        nextUIState = 100;
+        break;
+      case numBands + 2:
+        displayInfo();
+        nextUIState = 100;
+        break;
+      default:
+        displaySingleBand(nextUIState);
+        nextUIState = 100;
         break;
     }
   }
@@ -64,64 +68,38 @@ void loop() {
 // rotary encoder.
 // Returns to calling function when this menu is dismissed, communicating the menu state up the chain.
 byte mainMenu() {
-  byte mainMenuState = 0;
-  tft.setTextSize(1);
-  tft.setTextColor(ILI9341_RED, BACKGROUND);
-  tft.setCursor(10, 0);
-  tft.print("Plot all bands");
-  tft.setCursor(10, 10);
-  tft.print("Plot single band");
-  tft.setCursor(10, 20);
-  tft.print("Display summary");
-
-  while (1) {
-    if (mainMenuState == 0) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(BACKGROUND, BACKGROUND); }
-    tft.setCursor(0, 0);
-    tft.print(">");
-    if (mainMenuState == 1) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(BACKGROUND, BACKGROUND); }
-    tft.setCursor(0, 10);
-    tft.print(">");
-    if (mainMenuState == 2) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(BACKGROUND, BACKGROUND); }
-    tft.setCursor(0, 20);
-    tft.print(">");
-  
-    switch(awaitAction()) {
-      case CLICK:
-        return mainMenuState;
-      case LEFT:
-        mainMenuState = (mainMenuState - 1) % 3;
-        break;
-      case RIGHT:
-        mainMenuState = (mainMenuState + 1) % 3;
-        break;
-    }
-  }
-}
-
-byte chooseBandMenu() {
+  const byte menuEntries = numBands + 3;
   byte menuState = 0;
   byte i;
+  tft.setTextSize(1);
   tft.setTextColor(ILI9341_RED, BACKGROUND);
-  for ( i = 0; i < numBands; i++) {
+  for (i = 0; i < numBands; i++) {
     tft.setCursor(10, i * 10);
-    tft.print(nameOfBand[i]);
+    tft.print(nameOfBand[i] + " band");
   }
+  
+  tft.setCursor(10, 10 * (numBands));
+  tft.print("Plot all bands");
+  tft.setCursor(10, 10 * (numBands + 1));
+  tft.print("Display summary");
+  tft.setCursor(10, 10 * (numBands + 2));
+  tft.print("Device information");
 
   while (1) {
-    for ( i = 0; i < numBands; i++) {
+    for (i = 0; i < menuEntries; i++) {
       tft.setCursor(0, i * 10);
       if (menuState == i) { tft.setTextColor(ILI9341_YELLOW, BACKGROUND); } else { tft.setTextColor(BACKGROUND, BACKGROUND); }
       tft.print(">");
     }
 
-    switch (awaitAction()) {
+    switch(awaitAction()) {
       case CLICK:
         return menuState;
       case LEFT:
-        menuState = (menuState - 1) % numBands;
+        menuState = (menuState - 1) % menuEntries;
         break;
       case RIGHT:
-        menuState = (menuState + 1) % numBands;
+        menuState = (menuState + 1) % menuEntries;
         break;
     }
   }
@@ -157,6 +135,23 @@ void clickHandler() {
   selectedAction = CLICK;
 }
 
+void displayInfo() {
+  tft.fillScreen(BACKGROUND);
+  tft.setTextSize(2);
+  tft.setCursor(0, 0);
+  tft.setTextColor(ILI9341_RED, BACKGROUND);
+  tft.println("HF Antenna Analyzer");
+  tft.println();
+
+  tft.setTextColor(ILI9341_YELLOW, BACKGROUND);
+  tft.setTextSize(1);
+  tft.println("Based on hardware design by Beric Dunn (K6BEZ)");
+  tft.println("Software by Jan Szumiec (M0NIT)");
+  tft.println();
+  tft.println("Build: " + String(__DATE__) + " " + String(__TIME__));
+
+  awaitAction();
+}
 
 void displayAllBands() {
   displayPlot(135E5, 29E6, "ALL");
