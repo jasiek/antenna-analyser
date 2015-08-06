@@ -7,6 +7,13 @@
 #define X_TICS 5
 #define Y_TICS 10
 
+#define TABLEN 50
+#define T0 0
+#define T1 T0 + TABLEN
+#define T2 T1 + TABLEN
+#define T3 T2 + TABLEN
+#define T4 T3 + TABLEN
+
 // Analog pins are used for communication to make the circuit fit on a PCB easier.
 Adafruit_ILI9341 tft = Adafruit_ILI9341(10, A3, A2);
 AD9850 ad9850(7, 6, 5);
@@ -155,38 +162,74 @@ void displayInfo() {
   awaitAction();
 }
 
+// Display a plot for all bands, when done - press button or rotate to exit
 void displayAllBands() {
-  displayPlot(135E3, 29E6, "All Bands");
+  displayPlot(135E3, 29E6, "ALL");
   awaitAction();
 }
 
+// Display a plot for a single band, when done - press button or rotate to exit
 void displaySingleBand(byte band) {
   displayPlot(startOfBand[band], endOfBand[band], nameOfBand[band]);
   awaitAction();
 }
 
+// Display a textual summary for all bands
+// band name, minimum SWR, maximum SWR
+// background color indicates suitability (red-amber-green)
 void displaySummary() {
-
-  // for each band display the minimum swr and corresponding frequency
-  
-  int i;
-  float swr, f;
-  
+  tft.setCursor(T0, 0);
   tft.setTextSize(1);
+  tft.setTextColor(ILI9341_WHITE, BACKGROUND);
+  tft.print("BAND");
+  tft.setCursor(T1, 0);
+  tft.print("MIN");
+  tft.setCursor(T2, 0);
+  tft.print("AVG");
+  tft.setCursor(T3, 0);
+  tft.print("MAX");
+  
+  float min, avg, max;
+  int bgcolor;
+  
+  for (int i = 0; i < numBands; i++) {
+    sweepBand(startOfBand[i], endOfBand[i], steps[i], &min, &avg, &max);
+    byte row = 10 + i * 8;
 
-  tft.setCursor(0, 0);
-  tft.setTextColor(ILI9341_RED, BACKGROUND);
-  for (i = 1; i < numBands; i++) {
-    tft.setCursor(0, i * 8);
+    bgcolor = ILI9341_RED;
+    if (avg < 1.6) { bgcolor = ILI9341_YELLOW; }
+    if (avg < 1.3) { bgcolor = ILI9341_GREEN; }
+    tft.setTextColor(ILI9341_BLACK, bgcolor);  
+    
+    tft.setCursor(T0, row);
     tft.print(nameOfBand[i]);
-    tft.setCursor(6 * 6, i * 8);
-    findMinimum(startOfBand[i], endOfBand[i], steps[i], &f, &swr);
-    tft.print(f);
-    tft.setCursor(18 * 6, i * 8);
-    tft.print(swr);
+    tft.setCursor(T1, row); 
+    tft.print(min);
+    tft.setCursor(T2, row);
+    tft.print(avg);
+    tft.setCursor(T3, row);
+    tft.print(max);
   }
 
   awaitAction();
+}
+
+void sweepBand(double begin, double end, double step, float *min, float *avg, float *max) {
+  *min = 99999;
+  *max = 0;
+  float sum = 0;
+  float swr;
+  int count = 0;
+  double f;
+
+  for (f = begin; f < end; f += step) {
+    swr = measureSWR(f);
+    if (swr > *max) { *max = swr; }
+    if (swr < *min) { *min = swr; }
+    sum += swr;
+    count ++;
+  }
+  *avg = sum / count;
 }
 
 void displayPlot(double begin, double end, String label) {
@@ -261,32 +304,7 @@ void drawYAxis(byte nticks) {
   }
 }
 
-void findMinimum(float begin, float end, float step, float *freq, float *swr) {
-  *freq = 0;
-  *swr = 999;
-
-  float tempswr, f;
-  for (f = begin; f < end; f += step) {
-    tempswr = measureSWR(f);
-    if (tempswr < *swr) {
-      *swr = tempswr;
-      *freq = f;
-    }
-  }
-}
-
-float averageSWR(float begin, float end, float step) {
-  float swrsum = 0;
-  int count = 0;
-  float f;
-  for (f = begin; f < end; f += step) {
-    swrsum += measureSWR(f);
-    count++;
-  }
-  return swrsum / count;
-}
-
-float measureSWR(float f) {
+float measureSWR(double f) {
   float fwd, rev;
   ad9850.setfreq(f);
   delay(10);
