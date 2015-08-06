@@ -4,6 +4,8 @@
 #include <AD9850.h>
 
 #define BACKGROUND ILI9341_BLACK
+#define X_TICS 5
+#define Y_TICS 10
 
 // Analog pins are used for communication to make the circuit fit on a PCB easier.
 Adafruit_ILI9341 tft = Adafruit_ILI9341(10, A3, A2);
@@ -154,7 +156,7 @@ void displayInfo() {
 }
 
 void displayAllBands() {
-  displayPlot(135E5, 29E6, "ALL");
+  displayPlot(135E3, 29E6, "All Bands");
   awaitAction();
 }
 
@@ -187,40 +189,15 @@ void displaySummary() {
   awaitAction();
 }
 
-bool labelsVisible = false;
-void displayFrequency(double f, double swr) {
-  tft.setTextSize(2);
-
-  if (!labelsVisible) {
-    tft.setCursor(20, 20);
-    tft.setTextColor(ILI9341_RED, BACKGROUND);
-    tft.print("Frequency:");
-  
-    tft.setCursor(20, 40);
-    tft.setTextColor(ILI9341_RED, BACKGROUND);
-    tft.print("VSWR:");
-
-    labelsVisible = true;
-  }
-  
-  tft.setCursor(150, 20);
-  tft.setTextColor(ILI9341_GREEN, BACKGROUND);
-  tft.print(String(f) + " kHz  ");
-
-  tft.setCursor(150, 40);
-  tft.setTextColor(ILI9341_GREEN, BACKGROUND);
-  tft.print(measureSWR(f));
-}
-
 void displayPlot(double begin, double end, String label) {
   tft.fillScreen(BACKGROUND);
-  tft.setTextSize(2);
-  tft.setCursor(0, 0);
-  tft.setTextColor(ILI9341_RED);
-  tft.println(label);
-  
+
   double xstep = (end - begin) / tft.width();
-  double ystep = tft.height() / 10;
+  double ystep = tft.height() / Y_TICS;
+
+  drawXAxis(begin, end, X_TICS);
+  drawYAxis(Y_TICS);
+  drawXAxisLabels(label);
 
   float maxSWR = 0;
   float minSWR = 1000;
@@ -232,7 +209,7 @@ void displayPlot(double begin, double end, String label) {
 
   int prevx = 0;
   int prevy = 240;
-  for (int x = 0; x < tft.width(); x++) {
+  for (int x = 0; x < tft.width(); x += 5) {
     double f = begin + x * xstep;
     float swr = measureSWR(f);
 
@@ -243,14 +220,44 @@ void displayPlot(double begin, double end, String label) {
     tft.drawLine(prevx, prevy, x, y, ILI9341_GREEN);
     prevx = x;
     prevy = y;
+  }
 
-    if (x % 30 == 0) {
-      tft.setTextSize(1);
-      tft.setCursor(0, 50);
-      tft.setTextColor(ILI9341_BLUE, BACKGROUND);
-      tft.println("min= " + String(minSWR));
-      tft.println("max= " + String(maxSWR));
-    }
+  tft.setTextSize(1);
+  tft.setTextColor(ILI9341_BLUE, BACKGROUND);
+  tft.setCursor(60, tft.height() - 10);
+  tft.print("min=" + String(minSWR));
+  tft.setCursor(120, tft.height() - 10);
+  tft.print("max=" + String(maxSWR));
+}
+
+void drawXAxisLabels(String bandLabel) {
+  tft.setTextSize(2);
+  tft.setCursor(0, tft.height() - 15);
+  tft.setTextColor(ILI9341_RED);
+  tft.print(bandLabel);
+}
+
+void drawXAxis(double begin, double end, byte nticks) {
+  tft.setTextSize(1);
+  tft.setTextColor(ILI9341_BLUE, BACKGROUND);
+  byte n, x, xstep = tft.width() / nticks;
+  double fstep = (end - begin) / nticks;
+  
+  for (n = 0; n < nticks; n++) {
+    tft.drawLine(n * xstep, 0, n * xstep, 3, ILI9341_BLUE);
+    tft.setCursor(n * xstep, 4);
+    tft.print((begin + n * fstep) / 1E6);
+  }
+}
+
+void drawYAxis(byte nticks) {
+  tft.setTextSize(1);
+  tft.setTextColor(ILI9341_BLUE, BACKGROUND);
+  byte n, y, ystep = tft.height() / nticks;
+  for (n = nticks; n > 0; n--) {
+    tft.drawLine(tft.width() - 1, n * ystep, tft.width() - 3, n * ystep, ILI9341_BLUE);
+    tft.setCursor(tft.width() - 8, n * ystep - 3);
+    tft.print(nticks - n);
   }
 }
 
