@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 August 09, Sunday 00:23:46
+Cmp-Mod V01 Created by Cvpcb (2015-06-03 BZR 5697)-product   date = 2015 August 09, Sunday 00:29:32
 
 BeginCmp
 TimeStamp = /557093CE;
@@ -103,6 +103,13 @@ TimeStamp = /55C68FD7;
 Reference = P4;
 ValeurCmp = USB_OTG;
 IdModule  = Connect:USB_Micro-B;
+EndCmp
+
+BeginCmp
+TimeStamp = /55C6A4DD;
+Reference = P5;
+ValeurCmp = CONN_PROG;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x04;
 EndCmp
 
 BeginCmp
