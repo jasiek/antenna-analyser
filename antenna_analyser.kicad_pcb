@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 89.949999 83.949999 190.050001 134.050001)
     (thickness 1.6)
-    (drawings 8)
+    (drawings 9)
     (tracks 291)
     (zones 0)
     (modules 32)
@@ -1241,6 +1241,9 @@
     )
   )
 
+  (gr_text http://j.mp/HFAA9850 (at 113.35 87.1) (layer F.Cu)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
   (dimension 7 (width 0.3) (layer Dwgs.User)
     (gr_text "7.000 mm" (at 76.65 87.5 270) (layer Dwgs.User)
       (effects (font (size 1.5 1.5) (thickness 0.3)))
