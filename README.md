@@ -11,16 +11,16 @@ to graphically represent the results of VSWR analysis.
 I've bundled everything together into one repository so that the project can quickly be opened up in [KiCad](http://www.kicad-pcb.org/)
 and the Arduino IDE.
 
-![](pictures/pcb.png|width=800px)
-![Schematic](https://raw.githubusercontent.com/jasiek/antenna-analyser/master/pictures/schematic.png ){:width="800px"}
+![](pictures/pcb.png?width=800px)
+![Schematic](pictures/schematic.png)
 
-![Prototype](https://raw.githubusercontent.com/jasiek/antenna-analyser/master/pictures/prototype1.jpg)
-![Back of PCB](https://raw.githubusercontent.com/jasiek/antenna-analyser/master/pictures/prototype2.jpg)
-![Assembled Prototype](https://raw.githubusercontent.com/jasiek/antenna-analyser/master/pictures/prototype3.jpg)
-![Main menu](https://raw.githubusercontent.com/jasiek/antenna-analyser/master/pictures/prototype4.jpg)
-![Single band plot](https://raw.githubusercontent.com/jasiek/antenna-analyser/master/pictures/prototype5.jpg)
-![All bands plot](https://raw.githubusercontent.com/jasiek/antenna-analyser/master/pictures/prototype6.jpg)
-![Summary table](https://raw.githubusercontent.com/jasiek/antenna-analyser/master/pictures/prototype7.jpg)
+![Prototype](pictures/prototype1.jpg)
+![Back of PCB](pictures/prototype2.jpg)
+![Assembled Prototype](pictures/prototype3.jpg)
+![Main menu](pictures/prototype4.jpg)
+![Single band plot](pictures/prototype5.jpg)
+![All bands plot](pictures/prototype6.jpg)
+![Summary table](pictures/prototype7.jpg)
 
 ## TODO
 
