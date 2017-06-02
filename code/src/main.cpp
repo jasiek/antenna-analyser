@@ -16,7 +16,7 @@
 
 // Analog pins are used for communication to make the circuit fit on a PCB easier.
 Adafruit_ILI9341 tft = Adafruit_ILI9341(10, A3, A2);
-AD9850 ad9850(7, 6, 5);
+AD9850 ad9850;
 
 const String nameOfBand[] =  { "2200m",    "160m",     "80m",    "40m",    "30m",    "20m",    "17m",    "15m",      "12m",    "10m"   };
 const double startOfBand[] = { 135.7E3,    1.81E6,     3.5E6,    7E6,      10.1E6,   14E6,     18.068E6,  21E6,      24.89E6,  28E6    };
@@ -32,15 +32,31 @@ typedef enum {
   RIGHT
 } Action;
 
+float measureSWR(double f);
+void drawXAxis(double begin, double end, byte nticks);
+void drawYAxis(byte nticks);
+void drawXAxisLabels(String bandLabel);
+void sweepBand(double begin, double end, double step, float *min, float *avg, float *max);
+void displayPlot(double begin, double end, String label);
+void rollHandler();
+void clickHandler();
+byte awaitAction();
+void displaySingleBand(byte band);
+void displayAllBands();
+void displaySummary();
+void displayInfo();
+byte mainMenu();
+
 void setup() {
   pinMode(2, INPUT_PULLUP); // Rotary encoder CLK
   pinMode(3, INPUT_PULLUP); // Rotary encoder CLICK
   pinMode(4, INPUT_PULLUP); // Rotary encoder DATA
-  
+
   Serial.begin(57600);
   tft.begin();
   Serial.println("Width: " + String(tft.width()) + " Height: " + String(tft.height()));
   tft.setRotation(3);
+  ad9850.begin(7, 6, 5, 0);
 }
 
 void loop() {
@@ -48,7 +64,7 @@ void loop() {
 
   while(1) {
     tft.fillScreen(BACKGROUND);
- 
+
     switch(nextUIState) {
       case 100:
         nextUIState = mainMenu();
@@ -86,7 +102,7 @@ byte mainMenu() {
     tft.setCursor(10, i * 10);
     tft.print(nameOfBand[i] + " band");
   }
-  
+
   tft.setCursor(10, 10 * (numBands));
   tft.print("Plot all bands");
   tft.setCursor(10, 10 * (numBands + 1));
@@ -119,13 +135,13 @@ byte mainMenu() {
 volatile Action selectedAction;
 byte awaitAction() {
   selectedAction = NONE;
-  
+
   detachInterrupt(0);
   detachInterrupt(1);
   attachInterrupt(0, clickHandler, CHANGE);
   attachInterrupt(1, rollHandler, FALLING);
   interrupts();
-  
+
   while (selectedAction == NONE);
   return selectedAction;
 }
@@ -188,10 +204,10 @@ void displaySummary() {
   tft.print("AVG");
   tft.setCursor(T3, 0);
   tft.print("MAX");
-  
+
   float min, avg, max;
   int bgcolor;
-  
+
   for (int i = 0; i < numBands; i++) {
     sweepBand(startOfBand[i], endOfBand[i], steps[i], &min, &avg, &max);
     byte row = 10 + i * 8;
@@ -199,11 +215,11 @@ void displaySummary() {
     bgcolor = ILI9341_RED;
     if (avg < 1.6) { bgcolor = ILI9341_YELLOW; }
     if (avg < 1.3) { bgcolor = ILI9341_GREEN; }
-    tft.setTextColor(ILI9341_BLACK, bgcolor);  
-    
+    tft.setTextColor(ILI9341_BLACK, bgcolor);
+
     tft.setCursor(T0, row);
     tft.print(nameOfBand[i]);
-    tft.setCursor(T1, row); 
+    tft.setCursor(T1, row);
     tft.print(min);
     tft.setCursor(T2, row);
     tft.print(avg);
@@ -258,7 +274,7 @@ void displayPlot(double begin, double end, String label) {
 
     if (swr < minSWR) { minSWR = swr; }
     if (swr > maxSWR) { maxSWR = swr; }
-    
+
     int y = tft.height() - swr * ystep;
     tft.drawLine(prevx, prevy, x, y, ILI9341_GREEN);
     prevx = x;
@@ -283,9 +299,9 @@ void drawXAxisLabels(String bandLabel) {
 void drawXAxis(double begin, double end, byte nticks) {
   tft.setTextSize(1);
   tft.setTextColor(ILI9341_BLUE, BACKGROUND);
-  byte n, x, xstep = tft.width() / nticks;
+  byte n, xstep = tft.width() / nticks;
   double fstep = (end - begin) / nticks;
-  
+
   for (n = 0; n < nticks; n++) {
     tft.drawLine(n * xstep, 0, n * xstep, 3, ILI9341_BLUE);
     tft.setCursor(n * xstep, 4);
@@ -296,7 +312,7 @@ void drawXAxis(double begin, double end, byte nticks) {
 void drawYAxis(byte nticks) {
   tft.setTextSize(1);
   tft.setTextColor(ILI9341_BLUE, BACKGROUND);
-  byte n, y, ystep = tft.height() / nticks;
+  byte n, ystep = tft.height() / nticks;
   for (n = nticks; n > 0; n--) {
     tft.drawLine(tft.width() - 1, n * ystep, tft.width() - 3, n * ystep, ILI9341_BLUE);
     tft.setCursor(tft.width() - 8, n * ystep - 3);
@@ -306,7 +322,7 @@ void drawYAxis(byte nticks) {
 
 float measureSWR(double f) {
   float fwd, rev;
-  ad9850.setfreq(f);
+  ad9850.setfreq(f, 0);
   delay(10);
   fwd = analogRead(A0);
   rev = analogRead(A1);
