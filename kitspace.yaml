@@ -1,1 +1,5 @@
+summary: 0-40MHz amateur radio antenna analyser. Uses AD9850, Arduino Pro Mini and a 2.2 inch TFT display.
+site: https://github.com/jasiek/antenna-analyser
 gerbers: gerber
+color: red
+
