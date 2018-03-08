@@ -1,4 +1,4 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.6)
+(kicad_pcb (version 4) (host pcbnew 4.0.7)
 
   (general
     (links 72)
@@ -66,7 +66,8 @@
     (pcbplotparams
       (layerselection 0x3ffff_80000001)
       (usegerberextensions false)
-      (excludeedgelayer true)
+      (usegerberattributes true)
+      (excludeedgelayer false)
       (linewidth 0.100000)
       (plotframeref false)
       (viasonmask false)
