@@ -1,19 +1,19 @@
-References	Qty	Description
-C1	1	CP 1uF Polarised capacitor Elko vert 20x10mm RM2.5
-C3, C6, C2	3	C Small 10n Unpolarized capacitor Disc D3 P2.5
-C5, C4	2	C Small 100n Unpolarized capacitor Disc D3 P2.5
-D1, D2	2	D AA143 Diode DO-41 SOD81 Horizontal RM10
-ENC1	1	BI EN11-HSM1AF15 Rotary encoder with switch EN12-HS22AF30
-IC1	1	MCP6002-RESCUE-antenna analyser MCP6002 DIP-8 W7.62mm
-IC2	1	ARDUINO PRO MINI 3.3V Arduino Pro Mini 5V 16MHz
-P1	1	AD9850 CONN DDS
-P2	1	BNC bnc-ci
-P3	1	CONN 01X14 LCD Connector, single row, 01x14, pin header Socket Strip Straight 1x14
-P4	1	USB OTG-RESCUE-antenna analyser OTG Micro-B
-P5	1	CONN 01X04 PROG Connector, single row, 01x04, pin header Socket Strip Straight 1x04
-R2, R1, R5	3	R 50 Resistor Horizontal RM10mm
-R4, R3	2	R 100k Resistor Horizontal RM10mm
-R7, R6	2	R 10k Resistor Horizontal RM10mm
-R9, R8	2	R 648 Resistor Horizontal RM10mm
-R10, R11	2	R 5k Resistor Horizontal RM10mm
-U1	1	AMS1117 SOT223
+References	Qty	Description	Manufacturer	MPN	Digikey	Mouser	RS	Newark	Farnell
+C1	1	1uF THT	Panasonic	ECA-2GM010					
+C3, C6, C2	3	10nF THT	Murata	DSN6NZ81H103Q55B					
+C5, C4	2	100nF THT	AVX	TAP104K035SCS					
+D1, D2	2	AA143 Diode	Microsemi	AA143					
+ENC1	1	BI EN11-HSM1AF15	BI Technologies	EN11-HSM1AF15					
+IC1	1	MCP6002	Microchip	MCP6002-I/P					
+IC2	1	Arduino Pro Mini	SparkFun	11114					
+P1	1	AD9850 CONN DDS							
+P2	1	BNC Connector		5-1634556-0					
+P3	1	CONN 01X14 LCD Connector, single row, 01x14, pin header Socket Strip Straight 1x14		9-146281-0					
+P4	1	USB Micro-B	TE Connectivity	1981568-1					
+P5	1	CONN 01X04 PROG Connector, single row, 01x04, pin header Socket Strip Straight 1x04		9-146281-0					
+R2, R1, R5	3	50 Ohm THT Resistor		PTF5650R000BYEK					
+R4, R3	2	100k THT Resistor		MF12 100K					
+R7, R6	2	10k THT Resistor		MF12 10K					
+R9, R8	2	648 Ohm THT Resistor		RN60C6490FB14					
+R10, R11	2	5k THT Resistor		RN55C5001BRE6					
+U1	1	AMS1117-3.3	Advanced Monolithic Systems	AMS1117-3.3					
